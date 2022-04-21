@@ -1,25 +1,39 @@
 import java.util.Scanner;
 
 public class Ex04 {
+	
 	public static void main(String[] args) {
-			
-	//숫자만 입력하고, 2자리 정수를 입력하기전까지 무한 반복  10~99
+	
+		//두 배열 요소가 같으면 true, 틀리면 false
+		int[] nArr1 = {1,10,20,30,40,50};
+		int[] nArr2 = {1,10,20,30,40,50};
 		
-		Scanner sc = new Scanner(System.in);
-		int  num=0;
+		boolean check = ArrayEqual(nArr1,nArr2);
 		
-		System.out.println("두 자리 정수를 입력하세요!!");
+		System.out.print("nArr1 :  ");
+		for(int i: nArr1)
+			System.out.print(i+ " ");
 		
-		do {
-			
-			System.out.println("입력 >>");
-			num = sc.nextInt();
-			
-		}while(num<10 || num>99);
+		System.out.println();
 		
-		System.out.println(num);
+		System.out.print("nArr2 :  ");
+		for(int i: nArr2)
+			System.out.print(i+ " ");
 		
+		System.out.println("\n두 요소는 " + check);
+	}
+	
+	//두 배열 비교는 여기서
+	static boolean ArrayEqual(int[] n1, int[] n2) {
 		
+		if(n1.length != n2.length)
+			return false;
+		
+		for(int i=0; i<n1.length; i++)
+			if(n1[i] != n2[i]) 
+				return false;
+		
+		return true;
 		
 	}
 }

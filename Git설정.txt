@@ -1,0 +1,25 @@
+>> https://git-scm.com/download/win
+>> https://github.com/
+>>https://github.com/sinaboro/Ezen01 (강사주소)
+
+1. git init
+2. git config --global user.email  "rlaeocjf@gmail.com"
+3. git config --global user.name "gitTest"
+4. git add .  << 파일추가했을때 시작하는 포인트
+화면 클리어 >> clear  
+5. git commit -m "1회 테스트" <<추가시 실행
+
+6.  git remote add origin 주소
+
+7. git push origin master  << 추가시 실행
+
+8. 개인 저장소 변경사항 확인 git status
+----------------------------
+다른pc에서 폴더 생성 git bash
+9. git clone https://github.com/sinaboro/GitTest.git .(점찍기)
+.......
+git add .
+git commit -m "집pc"
+10. git pull origin master
+
+

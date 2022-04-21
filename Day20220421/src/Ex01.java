@@ -26,9 +26,6 @@ public class Ex01 {
 			
 	    System.out.println("------------------------");
 	    //세 정수를 큰 순서 대로 출력
-	    
-			
-		
 		
 	}
 

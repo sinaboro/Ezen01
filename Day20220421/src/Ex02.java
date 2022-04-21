@@ -16,7 +16,7 @@ public class Ex02 {
 		num2 = sc.nextInt();
 		num3 = sc.nextInt();
 
-		if (num2 > num1) {
+		if (num2 > num1) {  // && ||
 			if (num2 > num3) {
 				max = num2;
 				if (num1 > num3) {
@@ -48,11 +48,25 @@ public class Ex02 {
 				min = num2;
 			}
 		}
-
 		System.out.printf("max:%d, med:%d, min:%d\n",max,med,min);
-
-		// 세 정수를 큰 순서 대로 출력
-
+		System.out.println("-----------------------------------");
+		
+		if(num1>num2)
+			if(num2 > num3) {
+				max = num1;
+				med = num2;
+				min = num3;
+			}else if( num1 > num3) {
+				max = num1;
+				med = num3;
+				min = num2;
+			}else {
+				max = num3;
+				med = num2;
+				min = num1;
+			}
+			
+				
 	}
 
 }

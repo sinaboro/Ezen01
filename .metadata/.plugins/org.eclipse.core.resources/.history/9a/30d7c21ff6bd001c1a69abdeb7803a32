@@ -1,0 +1,60 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ex04 {
+	public static void main(String[] args) throws IOException {
+
+		int count=0;
+		{
+			File SrcFile = new File("res/data.txt");
+			FileInputStream srcFis = new FileInputStream(SrcFile);
+			Scanner fscan = new Scanner(srcFis);
+		
+			while(fscan.hasNext()) {
+				fscan.next();
+				count++;
+			}
+			fscan.close();
+			srcFis.close();
+		}
+
+		
+		int[] nums = new int[count];
+		{
+			File srcFile = new File("res/data.txt");
+			FileInputStream srcFis = new FileInputStream(srcFile);
+			Scanner fscan = new Scanner(srcFile);
+		
+			for(int i=0; i<count; i++){
+				String temp = fscan.next();
+				nums[i] = Integer.parseInt(temp);
+			}
+			fscan.close();
+			srcFis.close();
+		}
+
+		for(int i=0; i<count; i++)
+			System.out.printf("%d ",nums[i]);
+	
+		System.out.println("\n -----------------------------");
+	
+		//배열에서 특정 데이터를 찾는 능력
+		int index = -1;
+		{
+			//반복적으로 돌면서 찾아보자........
+			for(int i=0; i<count-1; i++)
+				if(88 == nums[i]) {
+					index = i;
+					break;
+				}
+		}
+		System.out.printf("index : %d\n",index);
+
+		//배열에서 위치를 바꾸거나 값을 변경하는 능력
+	
+	
+		//정렬(평균, 중앙값[정렬될 데이터의 가운데 값], 최대값, 최소값...)
+	}
+}

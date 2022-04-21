@@ -1,0 +1,41 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Tax {
+
+	public static void main(String[] args) throws IOException {
+		
+		int count=0;
+		{
+			File SrcFile = new File("res/covid.txt");
+			FileInputStream srcFis = new FileInputStream(SrcFile);
+			Scanner fscan = new Scanner(srcFis);
+			
+			while(fscan.hasNext()) {
+				count++;
+			}
+		}
+		System.out.println(count);
+		File SrcFile = new File("res/covid.txt");
+		FileInputStream srcFis = new FileInputStream(SrcFile);
+		Scanner fscan = new Scanner(srcFis);
+//		Scanner fscan = new Scanner(srcFis, "utf-8"); //한글이 깨지면
+		
+		String line = fscan.nextLine();
+		String[] tokens = line.split(",");
+		
+		System.out.println(line);
+//		System.out.println(Arrays.toString(tokens));
+//		System.out.println(tokens[0]);
+		String[] cities = 1;
+		String[] dates = 2;
+		int[] confirms = 1;
+		fscan.close();
+		srcFis.close();
+	}
+
+}

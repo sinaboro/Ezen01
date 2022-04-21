@@ -1,0 +1,32 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+//두 정수 입력받아서 평균을 구하는 프로그램
+public class Ex02 {
+
+	public static void main(String[] args) { // jvm 호출
+		
+		Scanner ab = new Scanner(System.in);
+		
+		int num = ab.nextInt();
+		
+		String str = ab.nextLine();
+		
+	}
+	
+	public static void func() {
+		System.out.println("Main-func()");
+	}
+}
+
+class Test {
+	void sum() {
+		System.out.println("Test-Sum()");
+	}
+	void sum2() {
+		System.out.println("Test-Sum()");
+	}
+	void sum3() {
+		System.out.println("Test-Sum()");
+	}
+}

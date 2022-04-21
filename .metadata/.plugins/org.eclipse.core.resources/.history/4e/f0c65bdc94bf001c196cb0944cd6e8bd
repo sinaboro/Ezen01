@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+public class ArrayEx12 {
+
+	public static void main(String[] args) {
+		
+		String[] name = new String[3];
+		int[] age = new int[3];
+		
+		System.out.println(Arrays.toString(age));
+		
+			
+	}
+}

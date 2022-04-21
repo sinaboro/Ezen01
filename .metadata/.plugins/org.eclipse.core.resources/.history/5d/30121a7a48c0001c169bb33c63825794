@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		int fee = 2500;
+		
+		int age=0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("나이 입력(0~100세 정수 입력) >> ");
+		
+		age = sc.nextInt();
+		
+		 if(age>=0 && age<=3)
+			 System.out.println(fee*0 + "원");
+		 else if(age>=4 && age<=13)
+			 System.out.println(fee*0.5 + "원");
+		 else if(age>=14 && age<=19)
+			 System.out.println(fee*0.75 + "원");
+		 else if(age>=65)
+			 System.out.println(fee*0 + "원");
+		 else if(age>=20 && age<=64)
+			 System.out.println(fee*1 + "원");
+		 else
+			 System.out.println("정확히 입력 요구");
+		 
+	}
+
+}

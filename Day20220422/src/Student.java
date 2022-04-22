@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 // 5명 학생 두과목(영어, 수학)을 입력받아서 과목별 평균, 학생별 평균을 구하는 프로그램
-
 public class Student {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -32,8 +31,5 @@ public class Student {
 			
 			System.out.printf("평균 %6.1f %6.1f\n", (double)totalSubject[0]/number,
 													(double)totalSubject[1]/number);
-		
-		
 	}
-
 }

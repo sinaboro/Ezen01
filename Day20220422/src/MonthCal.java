@@ -19,7 +19,12 @@ public class MonthCal {
 		
 		do {
 			
-			int month = (int)(Math.random()*12);
+			int month;
+		
+			do {  //직전월과 같은 월이면 반복 같은 달이 아니면 do~while 벗어남
+				month = (int)(Math.random()*12);
+			}while(month == last);
+			last = month;
 			
 			while(true) {
 				System.out.print((month+1) + "월 : ");

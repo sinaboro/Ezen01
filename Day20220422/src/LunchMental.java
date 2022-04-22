@@ -20,16 +20,18 @@ public class LunchMental {
 			int answer=0;
 			
 			switch(num) {
-				case 0: answer = x + y + z; break;
-				case 1: answer = x + y - z; break;
-				case 2: answer = x - y + z; break;
-				case 3: answer = x - y - z; break;
+				case 0   : answer = x + y + z; break;
+				case 1   : answer = x + y - z; break;
+				case 2   : answer = x - y + z; break;
+				default  : answer = x - y - z; break;
 			}
+			System.out.println("num : " + num);
 			
 			while(true) {
 				System.out.print(  x + ( (num < 2) ? " + " : " - ") + 
 						           y + ( (num % 2 == 0) ? " + " :  " - ")  +
 						           z + " = "   );
+				
 				int an =  sc.nextInt();
 				if( an == answer)  break;
 				System.out.println("오답입니다.");

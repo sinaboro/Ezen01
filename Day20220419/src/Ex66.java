@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex06 {
+public class Ex66 {
 	public static void main(String[] args) {
 
 		int fee = 2500;

@@ -21,6 +21,8 @@ public class Day {
 		
 		int retry=0;
 		int last = -1;
+		int sucess=0;
+		int failure=0;
 		
 		do {
 			int day;
@@ -36,12 +38,17 @@ public class Day {
 				if( dayeng.equals(DayEng[day]) ) break;
 				
 				System.out.println("오답입니다. 재입력해주세요!");
+				failure++;  //실패횟수 증가
 			}
 			System.out.println("정답입니다. 재시도(1)/포기(0) : ");
+			sucess++; //성공횟수 증가
+			
 			retry = sc.nextInt();
 			sc.nextLine();  //엔터 제거용
 			
 		}while(retry==1);
+		
+		System.out.printf("성공(%d)/실패(%d)\n",sucess,failure);
 		
 		System.out.println("프로그램 종료!!");
 	}

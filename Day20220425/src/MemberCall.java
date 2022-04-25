@@ -31,7 +31,3 @@ class MemberCall {
 		instanceMethod1();
 	}
 }
-
-class Abc{
-	MemberCall call = new MemberCall();
-}

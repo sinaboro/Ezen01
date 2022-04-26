@@ -9,6 +9,13 @@ public class Ex03 {
 	    System.out.println(c3.num);
 	  
 	    Car2 c10 = Car2.getInstance();
+	    
+	    c10.num++;
+	    System.out.println(c10.num);
+	    
+	    Car2 c11 = Car2.getInstance();
+	    c11.num++;
+	    System.out.println(c11.num);
 	    System.out.println(c10.num);
 	}
 }
@@ -21,7 +28,7 @@ class Car2{
 	
 	private static Car2 car2 = null;
 	
-	int num=10000;
+	int num=100;
 	
 	private Car2() {}
 	

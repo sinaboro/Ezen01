@@ -39,7 +39,9 @@ class Student2{
 	private int eng;
 	private int math;
 	
-	public Student2() {} //디폴트 생성자는 생성자가 존재하지않으면 java컴파일러가 생성해주지만, 생성자가 1개라도 존재하면
+	public Student2() {
+		this(null, 0,0,0,0,0);
+	} //디폴트 생성자는 생성자가 존재하지않으면 java컴파일러가 생성해주지만, 생성자가 1개라도 존재하면
 		                //생성하지 않는다. 필요하면 개발자가 직접 작성
 		
 	//함수 오버로딩
@@ -53,9 +55,10 @@ class Student2{
 	}
 	
 	public Student2(String name, int ban, int no) {
-		this.name = name;
-		this.ban  = ban;
-		this.no  = no;
+//		this.name = name;
+//		this.ban  = ban;
+//		this.no  = no;
+		this(name, ban, no,0,0,0);
 	}
 	
 	int getTotal() {

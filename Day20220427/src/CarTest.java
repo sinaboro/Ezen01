@@ -14,6 +14,9 @@ public class CarTest {
 		bu.passenger = 15;
 		bu.tire = 6;
 		System.out.println(bu.passenger + "," + bu.tire);
+		
+		Sports ss = new Sports(2,4,2,"Red", 1000);
+		System.out.println(ss.color + ", " + ss.passenger + "," + ss.tire +","+ ss.seat + ", "  + ss.sports);
 	}
 }
 
@@ -27,19 +30,30 @@ class Sedan extends Car{
 //		this.tire = tire;
 		System.out.println("Sedan() 생성자");
 	}
+	
+	public Sedan(int passenger, int tire , int seat, String color) {
+		super(passenger, tire, seat );
+		this.color = color;
+	}
+	
+	public Sedan() {}
 }
 
 class Sports extends Sedan{
 	int sports ;
 	
-	public Sports() {
-		//
+	public Sports() {}
+	
+	public Sports(int passenger, int tire , int seat, String color, int sports) { 
+		super(passenger,tire, seat ,color);
+		this.sports = sports;
 	}
 }
 class Car {
 	int passenger;
 	int tire;
 	int seat;
+	
 	public Car(int passenger, int tire, int seat) {
 		this.passenger = passenger;
 		this.tire = tire;

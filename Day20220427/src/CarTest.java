@@ -21,11 +21,19 @@ class Sedan extends Car{
 	String color;
 	
 	public Sedan(String color, int passenger, int tire) {
-		super(passenger,tire,0);
+		super(passenger,tire, 4);  //상위클래스 생성자 호출
 		this.color = color;
 //		this.passenger = passenger;
 //		this.tire = tire;
 		System.out.println("Sedan() 생성자");
+	}
+}
+
+class Sports extends Sedan{
+	int sports ;
+	
+	public Sports() {
+		//
 	}
 }
 class Car {
@@ -38,7 +46,11 @@ class Car {
 		this.seat = seat;
 		System.out.println("Car() 생성자");
 	}
-	public Car() {};
+	public Car() {
+		this(10,4,4);
+		System.out.println("Car()생성자");
+	};
+	
 	
 	void run() {
 		System.out.println("run()");
@@ -47,13 +59,9 @@ class Car {
 	
 }
 
-
-@ToString
 class Bus extends Car{
 	void passengerLoad() {};
 }
-
-@ToString
 class Truck extends Car{
 	void objectLoad() {};
 }

@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Student2"/>
+		<item key="selection" value="Car5"/>
 		<list key="findhistory">
+			<item value="Car"/>
 			<item value="Student"/>
 			<item value="age"/>
 			<item value="String src = &quot;ABCDE&quot;;"/>
@@ -16,6 +17,7 @@
 			<item value="char c1 = &apos;a&apos;;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Car5"/>
 			<item value="Student2"/>
 		</list>
 	</section>

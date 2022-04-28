@@ -1,6 +1,6 @@
 class Tv {
-	private boolean power; 	// 전원상태(on/off)
-	private int channel;	// 채널
+	 boolean power; 	// 전원상태(on/off)
+	 int channel;	// 채널
 
 	void power()        {   power = !power; }
 	void channelUp()    { 	 ++channel;     }
@@ -8,7 +8,7 @@ class Tv {
 }
 
 class CaptionTv extends Tv {
-	private boolean caption;		// 캡션상태(on/off)
+	 boolean caption;		// 캡션상태(on/off)
 	void displayCaption(String text) {
 		if (caption) {	// 캡션 상태가 on(true)일 때만 text를 보여 준다.
 			System.out.println(text);

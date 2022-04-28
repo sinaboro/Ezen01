@@ -2,10 +2,12 @@ class Tv3 {
 	private boolean power; 	// 전원상태(on/off)
 	private int channel;	// 채널
 
-	public Tv3() {}
+	public Tv3() {
+		this(false,0);
+	}
 	
 	public Tv3(int channel) {
-		this.channel = channel;
+		this(false,channel);
 	}
 	
 	public Tv3(boolean power, int channel) {
@@ -29,11 +31,12 @@ class Tv3 {
 class CaptionTv3 extends Tv3 {
 	private boolean caption;		// 캡션상태(on/off)
 	
-	public CaptionTv3() {}
+	public CaptionTv3() {
+		this(false,0, false);
+	}
 	
 	public CaptionTv3(int channel, boolean caption) {
-		super(channel);
-		this.caption = caption;
+		this(false, channel, caption);
 	}
 	public CaptionTv3(boolean power,int channel, boolean caption ) {
 		super(power ,channel);

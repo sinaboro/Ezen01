@@ -2,27 +2,47 @@ package com.ezen;
 
 public class Exam01 {
 	public static void main(String[] args) {
-		animal an = new animal();
-		animal an2 = new Mammal();
+//		animal an = new animal();
+//		animal an2 = new Mammal();
+//		animal an3 = new Person();
+//		an3.eat();
+//		an3.run();
+//		//an3.play();
+//		Person p =  (Person)an3;
+//		p.eat();
+//		p.run();
+//		p.play();
+//		Mammal m1 = (Mammal)an3;
+//		m1.eat();
+//		Object obj = new Person();
+//		Person p2 = (Person)obj;
+//		p2.eat();
 		
-		animal an3 = new Person();
-		an3.eat();
-		an3.run();
-		//an3.play();
-		
-		Person p =  (Person)an3;
-		
-		
-		p.eat();
-		p.run();
+		animal animal = new Penguin();
+		animal.eat();
+		//animal.play();
+		Penguin p = (Penguin)animal;
 		p.play();
 		
-		Mammal m1 = (Mammal)an3;
-		m1.eat();
+		Person pp = (Person)animal;
+		pp.eat();
 		
-		Object obj = new Person();
-		Person p2 = (Person)obj;
-		p2.eat();
+//		Person pen = (Person)animal;
+//		pen.eat();
+		
+//		Sparrow sp = new animal();
+//		Penguin pe = new Sparrow();
+		
+		if( animal instanceof Birds) {
+			Birds birds = (Birds)animal;
+		}
+		else if( animal instanceof Mammal ) {
+			Mammal mammal = (Mammal)animal;
+		}
+		
+//		Person person = (Person)animal;
+//		person.eat();
+		
 	}
 }
 
@@ -64,6 +84,9 @@ class Birds extends animal{ //조류
 class Penguin extends Birds { //펭궨
 	void eat() {
 		System.out.println("펭궨이 먹는다");
+	}
+	void play() {
+		System.out.println("펭궨이 논다");
 	}
 }
 

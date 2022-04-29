@@ -5,13 +5,10 @@
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="ArrayEx5"/>
     <fullyQualifiedTypeName name="ArrayEx05"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="Student"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
@@ -23,4 +20,22 @@
     <fullyQualifiedTypeName name="com.ezen.Sports"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="Test"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="zoo.Duck"/>
+    <fullyQualifiedTypeName name="zoo.Cat"/>
+    <fullyQualifiedTypeName name="com.ezen.Mammal"/>
+    <fullyQualifiedTypeName name="com.ezen.Person"/>
+    <fullyQualifiedTypeName name="com.ezen.Birds"/>
+    <fullyQualifiedTypeName name="com.ezen.animal"/>
+    <fullyQualifiedTypeName name="com.ezen.Penguin"/>
+    <fullyQualifiedTypeName name="com.ezen.Sparrow"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Process"/>
+    <fullyQualifiedTypeName name="Exercise7_19.Product"/>
 </qualifiedTypeNameHistroy>

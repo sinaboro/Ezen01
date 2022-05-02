@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="Test"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="zoo.Duck"/>
     <fullyQualifiedTypeName name="zoo.Cat"/>
     <fullyQualifiedTypeName name="com.ezen.Mammal"/>
@@ -38,4 +37,13 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="Exercise7_19.Product"/>
+    <fullyQualifiedTypeName name="Product"/>
+    <fullyQualifiedTypeName name="AbstractClass"/>
+    <fullyQualifiedTypeName name="Shape"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="Rectangle"/>
+    <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
+    <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
+    <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
+    <fullyQualifiedTypeName name="org.jsoup.select.Elements"/>
 </qualifiedTypeNameHistroy>

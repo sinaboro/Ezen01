@@ -9,7 +9,7 @@ import org.jsoup.select.Elements;
 
 public class naverTest {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException  {
 		// TODO Auto-generated method stub
 
 		int pages=2;

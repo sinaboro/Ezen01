@@ -58,9 +58,22 @@ class D extends A {
 public class test {
 
 	public static void main(String[] args) {
-		A a = new C(100,200,300);
 		
-		a.funcA();
+		int sum=0;
+		try {
+		int a = 10/0;
+		int b;
+			b = a/0;
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		for(int i=0; i<=100; i++)
+			sum +=i;
+	    System.out.println("sum : " + sum);
+//		A a = new C(100,200,300);
+//		
+//		a.funcA();
 	
 		
 	//	c.funcB();

@@ -46,4 +46,8 @@
     <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
     <fullyQualifiedTypeName name="org.jsoup.select.Elements"/>
+    <fullyQualifiedTypeName name="com.tv.VCR"/>
+    <fullyQualifiedTypeName name="com.tv.TVCR"/>
+    <fullyQualifiedTypeName name="SamsungLG.SamsungTV"/>
+    <fullyQualifiedTypeName name="LGSaumsung.BeanFactory"/>
 </qualifiedTypeNameHistroy>

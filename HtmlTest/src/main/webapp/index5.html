@@ -9,14 +9,29 @@
 	ul,ol,li {list-style : none ;margin: 0; padding: 0; }
 	
 	header{
-		width: 1100px; height: 100px; margin: 0 auto; background-color: gold;
+		width: 1100px; height: 100px; margin: 0 auto; 
 	}
+	
+	#logo{width:130px; height: 70px;  float:left; margin: 10px 0 0 10px;}
+	#logo img{float: left; margin: 0 0 5px 15px;}
+	
+	nav{ width: 740px; height:30px;  float: right; margin: 30px 30px 0 0; }
+	nav ul {font-family: "Arial"; font-weight: bold;} 
+    nav ul li {float: left; padding: 0 20px;}
+    nav ul li a{text-decoration: none; color: #333;}
+    nav ul a:hover { color: green;}
+	
+	#slider{width: 1100px; height: 450px; margin: 0 auto;  }
 	
 	section{
-		width: 1100px; height: 280px; margin: 0 auto; background-color: cyan;
+		width: 1100px; height: 200px; margin: 0 auto; 
 	}
 	
-	footer{ width: 1100px; height: 100px; margin: 0 auto; background-color: #eee; }
+	article{
+		width: 340px; height: 100px;  float: left; margin: 30px 10px;
+	}
+	
+	footer{ width: 1100px; height: 100px; margin: 0 auto;  }
 	
 	footer img{float: left; margin: 8px 0 0px 20px;}
 	footer p{font-style: "돋움" ; font-size: 15px; color:#666; margin: 40px 100px 0 0px; float: right;}
@@ -24,12 +39,33 @@
 </head>
 <body>
 	
-	<header></header>
+	<header>
+		<div id="logo"><img src="https://t1.daumcdn.net/media/img-section/auto2017/company/btj0000i007g.png" width="80px" height="80px"></div>
+		
+		<nav>
+			<ul>
+				<li><a href="#">VEHICLES</a></li>
+				<li><a href="#">PRICE</a></li>
+				<li><a href="#">OFFERS</a></li>
+				<li><a href="#">SECONDHSND CAR</a></li>
+				<li><a href="#">OWNERSHIP</a></li>
+			</ul>
+		</nav>
+		
+	</header>
 	
-	<section></section>
+	<div id="slider"><img src="http://file.carisyou.com/upload/2021/06/24/EDITOR_202106240241150720.jpg"  width="1050px" height="450px"></div>
+	
+	<section>
+		<article>원하는 모델 선택을 시작으로, 나에게 꼭 맞는 랜드로버를 디자인하십시오. 다양한 각도에서 검토가 가능하며, 
+		언제든지 재방문하셔서 확인하실 수 있습니다. 또한, 고객님이 디자인한 랜드로버를 지인들 또는 지역 전시장과 공유할 수 있습니다.
+		</article>
+		<article>모든 각도에서 보는 내 차 360° 뷰를 통해 모든 각도에서 내 차를 감상하십시오. 횟수에 제한 없이 언제든 구성 내용을 재방문하고 변경할 수 있습니다.</article>
+		<article>구성 내용 저장하기 차량 구성을 한 번에 완료하지 않아도 됩니다. 마음이 바뀌시면 언제든 재방문하여 다시 저장할 수 있습니다.</article>
+	</section>
 	
 	<footer>
-		<img src="https://t1.daumcdn.net/media/img-section/auto2017/company/btj0000i007g.png" width="100px"; height="100px">
+		<img src="https://t1.daumcdn.net/media/img-section/auto2017/company/btj0000i007g.png" width="100px" height="100px">
 		<p>Jaguar Land Rover Limited: Registered office: Abbey Road, Whitley, Coventry CV3 4LF,	Regitered in England No: 1672070</p>
 	</footer>
 	

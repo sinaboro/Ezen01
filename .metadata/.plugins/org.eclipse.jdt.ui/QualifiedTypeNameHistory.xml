@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="ArrayEx05"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="Student"/>
@@ -20,10 +19,8 @@
     <fullyQualifiedTypeName name="com.ezen.Sports"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="Test"/>
     <fullyQualifiedTypeName name="zoo.Duck"/>
     <fullyQualifiedTypeName name="zoo.Cat"/>
@@ -50,4 +47,14 @@
     <fullyQualifiedTypeName name="com.tv.TVCR"/>
     <fullyQualifiedTypeName name="SamsungLG.SamsungTV"/>
     <fullyQualifiedTypeName name="LGSaumsung.BeanFactory"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.ezen.ex01.ReadAgeExcption"/>
+    <fullyQualifiedTypeName name="com.ezen.ex01.HashSetEqualTest"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.ezen.ex01.Rectangle"/>
+    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
 </qualifiedTypeNameHistroy>

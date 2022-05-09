@@ -3,11 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	* {margin: 0;}
+	body {margin: 0; padding: 0; font-family: "맑은 고딕"}
+	ul,li,ol{list-style: none; margin: 0; padding: 0;}
+	
+	header { width: 1100px; height: 100px; margin: 0 auto;}
+	#logo { width: 130px; height: 70px;  float: left; margin: 10px 0 0 10px;}
+	#logo>img {width: 100%; height: 100%;}
+	
+	nav {width: 740px; height: 30px; float: right; margin: 30px 30px 0 0;}
+	nav ul{font-family: "Arial"; font-weight: bold; }
+	nav ul li{float: left; margin: 0 20px;}
+	nav ul li a{text-decoration: none; color: #333;}
+	nav ul a:hover {color: #666;}
+
+	#slider {width: 1100px; height: 450px; margin: 0 auto;}
+	#slider>img { width: 100%; height: 100%; margin: 0 auto;}
+	
+	section { width: 1100px; height: 200px;	margin: 0 auto;}
+	article { width: 340px; height: 145px; 	float: left; margin: 30px 10px; }
+			
+	article h3{ margin: 0; font-size: 16px; width: 100% ; height: 30px;}
+	article img { float: left; margin: 0 10px 0 0; width: 50%; height: 70%}	
+	#middle img { float: left; margin: 0 10px 0 0; width: 100%; height: 80%}	
+	article h4 { margin: 0; font-size: 14px; height: 30px;}
+	article p { font-family: "돋움"; font-size: 12px; color: #666;}
+	article .icon{width: 100px; height: 75px; float: left; margin: 0 0 0 5px; text-align: center;}
+	article .icon img{ float: left; margin: 0 0 0 20px;}
+	article .icon span {width: 100px; text-align: center; font-size: 12px;
+			float: left; margin: 10px 0 0 0px;} 
+	
+	footer {width: 1100px; height: 100px; margin: 0 auto; background-color: #d2d2d2;}
+	footer img{float: left; width:15%; height:60% ;margin: 20px 0 0 20px;}
+	footer p { font-family: "돋움"; font-size: 14px; color: #666;
+		margin: 40px 80px 0 0; float: right; display: block;}
+</style>
 </head>
 <body>
 	
 	<header>
-		<div id="logo"><img src="https://t1.daumcdn.net/media/img-section/auto2017/company/btj0000i007g.png"></div>
+		<div id="logo"><img src="https://t1.daumcdn.net/media/img-section/auto2017/company/btj0000i007g.png" ></div>
 		<nav>
 			<ul>
 				<li><a href="#">VEHICLES</a></li>
@@ -24,33 +60,33 @@
 	<section>
 		<article>
 			<h3>NEWS</h3>
-			<a href="#"><img src="https://t1.daumcdn.net/media/img-section/auto2017/company/btj0000i007g.png"></a>
+			<a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_hhinw5RzxAQvuHfduGi_CIcSAN1ONEhR-HLdetxyUajcgAK6PzsFEOAo3zA5HEnEYc&usqp=CAU"></a>
 			<h4>Discovery 5</h4>
 			<p>랜드로버가 만든 정통 SUV, 디스커버리의 신형 모델이 다음 달 공개된다.</p>
 		</article>
-		<article>
+		<article id = "middle">
 			<h3>랜드로버 모델 살펴보기</h3>
-            <a href="#"><img src="#" ></a>
+            <a href="#"><img src="https://post-phinf.pstatic.net/MjAxODAxMTlfMTkg/MDAxNTE2MzY5MTA3MjI3.43DE4fQBkYZUqQSHPjuD5hNCwPUQUzfkry7z72W6WmYg.qNxv5WVT1d4g2RJyhuQWakS_tgZqMKfsfuKW2BVY47kg.JPEG/2012-Land-Rover-Lineup.jpg?type=w1200" ></a>
 		</article>
 		<article>
 			<h3>고객지원</h3>
             <div class="icon">
-	            <a href="#"><img src="#"></a>
+	            <a href="#"><img src="data:image/jpeg;base64,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F8XxCuFdSMmjdFI0Oa4WIPxB1B6EaKlVXydkPx01ZLHY3aHNxEdngg/FBfFzN5ZmspJi4jNjmjzJBsFXW7u7SAsNp+2MH3la1TuPV1B/vG0XOt0j/wBLgetBxt3tozSVULD9aQX7DM+4Fei7d2s2liMjs3WOBvNzuWXRam7u68VF4ml8khFjJJrbo0DJoXP2juc6pqxUT1TnRg/oWx4RhGjMeI5dcs89LoKxsjeFvGdLWcRwviDYwDdxOriSMh0HuAsbBW760kzDG+OoIP3WXB5EHHkR1VubSMAsGMsMhZoX35sz7DPyhB46dtzNf4HXAN2uORIByJHI6XsvSd1N4BWR+IBsrB429fvt8vgtrbWwoqqF0T2ht/RewAOY62Th/Dmqps75PpqeVs0e0CHNNx9BkeoI4mYPRB0PlHm4cULx6YlIZ643YvddVfd7alY+fDTtjc/A42kOWEEX5jPRXrezd75/C2Pi8NzHh4eGYuRBGG45HquXutuS6iqOO6qMowOZh4WH0i03vjP2enNBgrdpbWiYXughIGvDGM98Idc+pVqv3oqaoNjl4WEPa7IEAOabgu10OdvJeuqu7x7ow1gLheKX/mRjX8TdHfHzQae6+xpbtnnmicNWtgcXNJ5FzyB7ANeatypOxdy6mkfii2ibfWY6nux3dvE18xYq6NvbO1+dhb3IMNVyRKrkiDLFoOymoRaDspoCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiINeq5IlVyRBli0HZTUItB2U0BERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREGvVckSq5IgyxaDspqERyHZTugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ugIl0ug16rkiVXJEGBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB8KIiD/2Q=="></a>
 	            <span>시승신청</span>
             </div>
             <div class="icon">
-	            <a href="#"><img src="#"></a>
+	            <a href="#"><img src="https://sc04.alicdn.com/kf/HTB16gzgd8Cw3KVjSZR0q6zcUpXal.jpg"></a>
 	            <span>뉴스레터 신청</span>
             </div>
             <div class="icon">
-	            <a href="#"><img src="#"></a>
+	            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9G49nI7OXCGJul2Kp4qWkgxcLQ8dHnDkgWg&usqp=CAU"></a>
 	            <span>전시장 찾기</span>
             </div>
 		</article>
 	</section>
 	
 	<footer>
-		<img src="img src="http://file.carisyou.com/upload/2021/06/24/EDITOR_202106240241150720.jpg">
+		<img src="http://file.carisyou.com/upload/2021/06/24/EDITOR_202106240241150720.jpg">
 		<p>Jaguar Land Rover Limited: Registered office: Abbey Road, Whitley, Coventry CV3 4LF. Registered in England No: 1672070
 		</p>
 	</footer>

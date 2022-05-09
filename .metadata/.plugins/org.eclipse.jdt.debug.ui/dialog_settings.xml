@@ -4,7 +4,7 @@
 	</section>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220425/src&amp;lt;{BankAccount.java[MainClass&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220425/src&amp;lt;{BankAccount2.java[MainClass2&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220428/src&amp;lt;Exercise7_19{Execcise7_19.java[Exercise7_19&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220425/src&amp;lt;{BankAccount.java[MainClass&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220425/src&amp;lt;{BankAccount2.java[MainClass2&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220428/src&amp;lt;Exercise7_19{Execcise7_19.java[Exercise7_19&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220505Test/src&amp;lt;{Exercise7_10.java[Exercise7_11&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Day20220505Test/src&amp;lt;{MyTv2.java[Exercise7_11&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="500"/>
 			<item key="DIALOG_WIDTH" value="600"/>

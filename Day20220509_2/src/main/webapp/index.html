@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Hello</h1>
+	<img src="#" alt="강아지 사진" width="200" height="200">
+	<img src="#" alt="고양이 사진" style="width=200px; height=200px">
+	
+	<!-- 블럭분할 -->
+	<div>div1</div>
+	<div>div2</div>
+	<div>div3</div>
+	<div>div4</div>
+	
+	<!-- inline -->
+	<span>inline1</span>	
+	<span>inline2</span>	
+	<span>inline3</span>	
+	<span>inline4</span>	
+	
+	<!-- 폼태그 -->
+	<form name="name" action="#" method="get">
+		<input type="text" name="name1" value="홍길동">
+		
+		<select id="food" name="food">
+			<option value="pizza" selected="selected">피자</option>
+			<option value="pasta" ">파스타</option>
+			<option value="hamburger selected="selected ">햄버거</option>
+			<option value="pizza" ">피자</option>
+		</select><br><br>
+
+		<select id="food" name="food" multiple>
+			<option value="pizza" selected="selected">피자</option>
+			<option value="pasta" ">파스타</option>
+			<option value="hamburger" >햄버거</option>
+			<option value="pizza" ">피자</option>
+		</select><br><br>
+
+		<select id="food" name="food">
+			<optgroup label="먹을것">
+				<option value="pizza">피자</option>
+				<option value="pasta" ">파스타</option>
+				<option value="hamburger">햄버거</option>
+				<option value="pizza" ">피자</option>
+			</optgroup>
+			<optgroup label="마실것">
+				<option value="cola" >콜라</option>
+				<option value="coffee">커피</option>
+				<option value="icetea">차</option>
+			</optgroup>
+		</select><br><br>
+		
+		<textarea name = "text" rows="10" cols="50">
+			html/css/js/java
+		</textarea><br>
+		
+		<button>button</button>
+
+		<fieldset>
+			<legend>개인정보</legend>
+			<label for="name">이름</label>
+			<input type="text" id = "name" ><br>
+			
+			<label for="txt">소속</label>
+			<input type="text" id="txt"><br>
+			
+			<input type="submit" value="전송">
+		</fieldset>
+		
+		<input type="text" name="text" size="20">
+		<input type="password" name="pwd" required>
+		<input type="button" value="버튼">
+	
+		<br><br>
+		
+		<input type="radio" name="gender" value="male">남자
+		<input type="radio" name="gender" value="female">여자<br>
+		
+		<input type="checkbox" name="food" vlaue="pizza">피자<br>
+		<input type="checkbox" name="food" vlaue="humburger">햄버거<br>
+		<input type="checkbox" name="food" vlaue="pasta">파스타<br>
+		
+		<input type="email" name = "email">
+		<input type="reset" value="취소">
+			
+	</form>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

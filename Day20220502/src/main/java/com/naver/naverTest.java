@@ -12,7 +12,7 @@ public class naverTest {
 	public static void main(String[] args) throws IOException  {
 		// TODO Auto-generated method stub
 
-		int pages=2;
+		int pages=20;
 		
 		for(int i=1; i<pages; i++) {
 		

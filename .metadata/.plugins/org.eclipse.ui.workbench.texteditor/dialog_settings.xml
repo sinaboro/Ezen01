@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Car5"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="h4"/>
 			<item value="Car"/>
 			<item value="Student"/>
 			<item value="age"/>

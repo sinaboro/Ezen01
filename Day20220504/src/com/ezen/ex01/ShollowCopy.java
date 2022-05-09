@@ -3,10 +3,10 @@ package com.ezen.ex01;
 public class ShollowCopy {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
-		Rectangle org = new Rectangle(1, 1, 8, 8);
+		Rectangle org = new Rectangle(0,0, 0, 0);
 		Rectangle cpy ;
 		
-		cpy = (Rectangle) org.clone();
+		cpy =  (Rectangle) org.clone();
 		org.showPostion();
 		cpy.showPostion();
 		
@@ -32,7 +32,12 @@ class Rectangle implements Cloneable{
 	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
+		Rectangle copy = (Rectangle) super.clone();
+		
+		copy.upperLeft = (Point2) upperLeft.clone();
+		copy.lowerRight = (Point2) lowerRight.clone();
+		
+		return copy;
 	}
 	
 	public void showPostion() {  //사각형 좌표 출력
@@ -58,8 +63,8 @@ class Point2 implements Cloneable{
 	}
 	
 	public void ShowPosition() {
-		//System.out.println("[" + xPos + "," + yPos + "]");  // [10,10]
-		System.out.printf("[%d, %d]\n", xPos, yPos);  // [10,10]
+		System.out.println("[" + xPos + "," + yPos + "]");  // [10,10]
+//		System.out.printf("[%d, %d]\n", xPos, yPos);  // [10,10]
 	}
 	
 	@Override

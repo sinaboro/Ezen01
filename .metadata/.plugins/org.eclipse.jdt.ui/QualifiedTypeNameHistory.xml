@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="ArrayEx5"/>
-    <fullyQualifiedTypeName name="ArrayEx05"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="Student"/>
-    <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="java.lang.SecurityException"/>
     <fullyQualifiedTypeName name="Sedan"/>
     <fullyQualifiedTypeName name="Sports"/>
@@ -36,9 +25,7 @@
     <fullyQualifiedTypeName name="Exercise7_19.Product"/>
     <fullyQualifiedTypeName name="Product"/>
     <fullyQualifiedTypeName name="AbstractClass"/>
-    <fullyQualifiedTypeName name="Shape"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="Rectangle"/>
     <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
@@ -53,8 +40,24 @@
     <fullyQualifiedTypeName name="com.ezen.ex01.ReadAgeExcption"/>
     <fullyQualifiedTypeName name="com.ezen.ex01.HashSetEqualTest"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="com.ezen.ex01.Rectangle"/>
     <fullyQualifiedTypeName name="java.lang.Cloneable"/>
+    <fullyQualifiedTypeName name="Time"/>
+    <fullyQualifiedTypeName name="Test02_1"/>
+    <fullyQualifiedTypeName name="C"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="Shape"/>
+    <fullyQualifiedTypeName name="Circle"/>
+    <fullyQualifiedTypeName name="Rectangle"/>
+    <fullyQualifiedTypeName name="SingletonTest"/>
+    <fullyQualifiedTypeName name="Singleton"/>
+    <fullyQualifiedTypeName name="com.ezen.D"/>
+    <fullyQualifiedTypeName name="com.ezen.ex01.Rectangle"/>
+    <fullyQualifiedTypeName name="com.ezen01.Card"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+    <fullyQualifiedTypeName name="java.lang.Number"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

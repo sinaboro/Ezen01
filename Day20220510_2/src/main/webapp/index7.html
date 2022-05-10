@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가시속성</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		margin: 20px;
+		background-color: silver; 
+	}
+	.id1{ display: block;}
+	
+	.inline { display: inline;}
+	.block{ display: block;}
+	.inline-block { display: inline-block;}
+	.none { display: none;}
+	.visible { visibility: visible; }
+	.hidden { visibility: hidden;}
+	
+	.half-transparent { opacity: 0.5;}
+	.opacity { opacity: 0.3 }
+</style>
+</head>
+<body>
+	<h1>가시속성</h1>
+	<p class="inline">p inline #1</p>
+	<p class="inline">p inline #2</p>
+	
+	<span class="block">span block #1</span>
+	<span class="block">span block #2</span>
+	
+	<div class="none">None</div>
+	<div class="inline-block">box3</div>
+	<hr>
+	<h1>visibility</h1>
+	<div class="visible">visible</div>
+	<div class="hidden">Hidden</div>
+	<div class="visible">visible</div>
+	<hr>
+	<h1>opacity</h1>
+	<div class="half-transparent">opacity: 0.5</div>
+	<div class="opacity">opacity: 0</div> 
+	
+	<div class="container">
+  <h2>Pagination - Active State</h2>
+  <p>Add class .active to let the user know which page he/she is on:</p>
+  <ul class="pagination">
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+</div>
+
+<hr>
+  <button type="button" class="btn btn-success">Success</button>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -27,6 +27,7 @@ public class Database {
 	public void getConnection() {
 		try {
 			con = DriverManager.getConnection(URL, "root", "1234"); //경로, 아이디, 비번
+//			System.out.println("connection!!!!!!!");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -51,6 +52,7 @@ public class Database {
 			
 			//1. Mysql 연결
 			getConnection();
+
 			
 			//2. SQL문장 작성
 			String sql = "select * from member";
@@ -94,7 +96,7 @@ public class Database {
 		} 
 	 */
 	//추가(Insert)
-	public void mydbInsert(int no, String name, String sex, String content) {
+	public void mydbInsert(int no1, String name1, String sex1, String content1) {
 		try {
 			//1. 연걸
 			getConnection();
@@ -106,10 +108,10 @@ public class Database {
 			pstmt = con.prepareStatement(sql);
 			
 			//4. ????에 값을 채운다.
-			pstmt.setInt(1, no);
-			pstmt.setString(2, name);
-			pstmt.setString(3, sex);
-			pstmt.setString(4, content);
+			pstmt.setInt(1, no1);
+			pstmt.setString(2, name1);
+			pstmt.setString(3, sex1);
+			pstmt.setString(4, content1);
 			
 			//5. 실행
 			pstmt.executeUpdate(); //db 값 변동시에는 executeUpdate  
@@ -189,7 +191,6 @@ public class Database {
 	
 	public static void main(String[] args) {
 		Database db = new Database();
-		db.getConnection();
 		db.mydbListData();
 		System.out.println("----------------------");
 		//db.mydbInsert(13, "최원태", "남성", "키움투수");

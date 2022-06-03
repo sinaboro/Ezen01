@@ -18,7 +18,7 @@
 			</tr>
 			<tr>
 				<td>암 호</td>
-				<td><input type="password" name="pwd" value="1234"></td>
+				<td><input type="password" name="pwd" value="11111"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">

@@ -268,8 +268,8 @@ public class BoardDAO {
 		return chk;
 	}
 	
-	public boolean boardDelete(int no, String pwd) {
-		boolean chk=false;
+	public int boardDelete(int no, String pwd) {
+		int result = 0;
 		
 		try {
 			//1. 연결
@@ -290,7 +290,7 @@ public class BoardDAO {
 			}
 			
 			if(chk_pwd.equals(pwd)) {
-				chk = true;
+				result = 1;
 				
 				sql = "delete from jspBoard where no=?";
 				ps = conn.prepareStatement(sql);
@@ -303,7 +303,7 @@ public class BoardDAO {
 			disConnection();
 		}
 		
-		return chk;
+		return result;
 	}
 	
 	

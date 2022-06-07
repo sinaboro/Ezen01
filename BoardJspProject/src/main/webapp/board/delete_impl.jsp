@@ -7,14 +7,6 @@
 	String no = request.getParameter("no");
 	String pwd = request.getParameter("pwd");
 	
-	boolean result = dao.boardDelete(Integer.parseInt(no), pwd);
-	
-	if(result == true){
+	int result = dao.boardDelete(Integer.parseInt(no), pwd);
 %>
-	<script type="text/javascript">
-		alert("데이타가 삭제됐습니다.");
-		location.href="list.jsp";
-	</script>
-<%
-	}
-%>
+<%=result%>

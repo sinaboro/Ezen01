@@ -39,5 +39,5 @@
 			e.printStackTrace();
 		}
 	}	
-	response.sendRedirect("index.jsp");	
+	response.sendRedirect("memberForm.jsp");	
 %>

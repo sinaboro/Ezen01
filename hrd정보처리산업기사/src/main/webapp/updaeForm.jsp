@@ -72,7 +72,7 @@
 	                <th colspan="2">
 	                    <input type="submit" value="수 정">
 	
-	                    <input type="button" value="조 회">
+	                    <input type="button" value="조 회" onclick="location.href='memberForm.jsp'">
 	                </th>
 	            </tr>
 	        </table>

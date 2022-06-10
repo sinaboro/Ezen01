@@ -21,12 +21,12 @@
 		}
 %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/common.css"/>
+<script type="text/javascript" src="/script/member.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -36,41 +36,41 @@
 	<section>
 
         <h3>쇼핑몰 회원 등록</h3>
-		<form method="post" action="joinImpl.jsp">
+		<form method="post" action="joinImpl.jsp" name="frm">
 	        <table border="1" style="margin-left: auto; margin-right: auto;">
 	            <tr>
 	                <th>회원번호(자동발생))</th>
-	                <td><input type="text"  name="custno" value="<%=custno %>"><br></td>
+	                <td><input type="text"  name="custno" id="custno" value="<%=custno %>"><br></td>
 	            </tr>
 	            <tr>
 	                <th>회원성명</th>
-	                <td><input type="text"  name="custname"></td>
+	                <td><input type="text"  name="custname" id="custname"></td>
 	            </tr>
 	            <tr>
 	                <th>회원전화</th>
-	                <td><input type="text"  name="phone"></td>
+	                <td><input type="text"  name="phone" id="phone"></td>
 	            </tr>
 	            <tr>
 	                <th>회원주소</th>
-	                <td><input type="text"  name="address"></td>
+	                <td><input type="text"  name="address" id="address"></td>
 	            </tr>
 	            <tr>
 	                <th>가입일자</th>
-	                <td><input type="text" id="date" name="joindate"></td>
+	                <td><input type="text" name="joindate" id="joindate"></td>
 	            </tr>
 	            <tr>
 	                <th>고객등급 [A:VIP, B:일반, C:직원]</th>
-	                <td><input type="text" id="fname" name="grade"></td>
+	                <td><input type="text" name="grade" id="grade"></td>
 	            </tr>
 	            <tr>
 	                <th>도시코드</th>
-	                <td><input type="text" id="city_num" name="city"></td>
+	                <td><input type="text" name="city" id="city"></td>
 	            </tr>
 	            <tr>
 	                <th colspan="2">
-	                    <input type="submit" value="등록">
+	                    <input type="submit" value="등록" onclick="return joinCheck()" >
 	
-	                    <input type="button" value="조회">
+	                    <input type="button" value="조회" onclick="location.href='memberForm.jsp'">
 	
 	                </th>
 	            </tr>

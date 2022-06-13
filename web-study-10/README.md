@@ -2,13 +2,16 @@ WEB-STUDY-10
 
 환경
 1. windows
-2. sts tool (Version: 3.9.17.RELEASE)3
+2. sts tool (Version: 3.9.17.RELEASE)
 3. oracle 11g
 4. jdk11
 5. 인코딩 utf-8
 6. git
-
-
+7, jstl.jar
+8. ojdbc6.jar
+9. standard.jar
+10. cos.jar (version:cos-22.05.zip)
+11. lombok-1.18.24.jar
 
 MYSQL 테이블 생성 및 데이타 입력
 create table product(
@@ -28,4 +31,12 @@ insert into product values(product_seq.nextval, 'Dynamic Programming book 시리
 insert into product values(product_seq.nextval, 'Visual C++ MFC 윈도우 프로그래밍', 26000, 'mfc.jpg', 'Visual C++를 처음 시작하는 독자의 눈높이에 맞춘 Visual C++...');
 insert into product values(product_seq.nextval, 'jQuery and jQuery Mobile : 이해하기 쉽게 풀어쓴', 25000, 'jquery.jpg', '소스 하나로 데스크탑과 모바일까지 HTML5와 함께 사용한다. 초보자들도 ...');
 
-commit;
+
+DBCP---\
+<Resource name="jdbc/myoracle" auth="Container"
+              type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
+              username="scott" password="tiger" maxTotal="20" maxIdle="10"
+              maxWaitMillis="-1"/>
+
+

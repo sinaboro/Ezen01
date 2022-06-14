@@ -16,7 +16,7 @@ import lombok.ToString;
 );
  */
 @Data
-public class ProductVO {
+public class MemberVO {
 	private Integer code;
 	private String name;
 	private Integer price;

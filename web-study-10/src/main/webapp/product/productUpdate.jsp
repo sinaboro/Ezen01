@@ -50,9 +50,9 @@
 					</td>
 				</tr>
 			</table> <br> 
-			 <input type="submit" value="수정"	 onclick="return productCheck()"> 
-			 <input type="reset"  	value="다시작성"> 
-			 <input type="button" value="목록"  	onclick="location.href='productList.do'">
+			 <input type="submit"  value="수정"	 onclick="return productCheck()"> 
+			 <input type="reset"   value="다시작성"> 
+			 <input type="button" value="목록"  	onclick="location.href='ProductList.do'">
 		</form>
 	</div>
 </body>

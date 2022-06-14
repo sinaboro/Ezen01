@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.saeyan.dto.ProductVO;
+import com.saeyan.dto.MemberVO;
 
 import util.DBManager;
 
@@ -20,8 +20,8 @@ public class ProductDAO {
 		return instance;
 	}
 	
-	public List<ProductVO> selectAllProdcuts(){
-		List<ProductVO> list =  new ArrayList<ProductVO>();
+	public List<MemberVO> selectAllProdcuts(){
+		List<MemberVO> list =  new ArrayList<MemberVO>();
 		Connection conn = null;
 		PreparedStatement pstmt=null;
 		ResultSet rs = null;
@@ -32,7 +32,7 @@ public class ProductDAO {
 				pstmt = conn.prepareStatement(sql);
 				rs = pstmt.executeQuery();
 				while(rs.next()) {
-					ProductVO vo = new ProductVO();
+					MemberVO vo = new MemberVO();
 					vo.setCode(rs.getInt(1));
 					vo.setName(rs.getString(2));
 					vo.setPrice(rs.getInt(3));
@@ -50,7 +50,7 @@ public class ProductDAO {
 	}
 
 	//insert
-	public int insertProduct(ProductVO pVo) {
+	public int insertProduct(MemberVO pVo) {
 		int result = -1;
 		
 		String sql = "insert into product values(product_seq.nextval, ?,?,?,?)";
@@ -76,8 +76,8 @@ public class ProductDAO {
 		return result;
 	}
 
-	public ProductVO selectProductByCode(String code) {
-			ProductVO pVo = new ProductVO();
+	public MemberVO selectProductByCode(String code) {
+			MemberVO pVo = new MemberVO();
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
@@ -104,6 +104,51 @@ public class ProductDAO {
 			}
 			
 		return pVo;
+	}
+
+	public int updateProduct(MemberVO pVo) {
+		int result=-1;
+		Connection conn= null;
+		PreparedStatement pstmt=null;
+		String sql = "update product set name=?, price=?, pictureUrl=? ,description=?" 
+							+ "where code = ?";
+		try {
+				conn = DBManager.getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, pVo.getName());
+				pstmt.setInt(2,pVo.getPrice());
+				pstmt.setString(3,pVo.getPictureurl());
+				pstmt.setString(4, pVo.getDescription());
+				pstmt.setInt(5, pVo.getCode());
+				
+				result = pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.closeConnection(conn, pstmt);
+		}
+		return result;
+	}
+
+	public int productDelete(int code) {
+		int result=-1;
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			String sql = "delete from product where code=?";
+			
+			try {
+					conn = DBManager.getConnection();
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setInt(1, code);
+					result = pstmt.executeUpdate();		
+					
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				DBManager.closeConnection(conn, pstmt);
+			}
+		
+		return result;
 	}
 	
 }

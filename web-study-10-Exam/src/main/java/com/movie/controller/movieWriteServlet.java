@@ -1,4 +1,4 @@
-package com.saeyan.controller;
+package com.movie.controller;
 
 import java.io.IOException;
 
@@ -10,49 +10,53 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.movie.dao.MovieDAO;
+import com.movie.dto.MovieVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
-import com.saeyan.dao.ProductDAO;
-import com.saeyan.dto.MemberVO;
 
-@WebServlet("/productWrite.do")
-public class ProductWriteServlet extends HttpServlet {
+@WebServlet("/movieWrite.do")
+public class movieWriteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("product/productWrite.jsp");
+//		response.sendRedirect("movie/movieWrite.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("movie/movieWrite.jsp");
 		dispatcher.forward(request, response);
-//		response.sendRedirect("product/productWrite.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		
 		ServletContext context = getServletContext();
-		String path = context.getRealPath("upload");
+		String path = context.getRealPath("images");
 		String encType = "utf-8";
 		int sizeLimit = 20*1024*1024;  //20mb
 		
 		MultipartRequest multi = new MultipartRequest(
 					request, path,  sizeLimit, encType, new DefaultFileRenamePolicy()
 				);
-		String name = multi.getParameter("name");
+		String title = multi.getParameter("title");
 		int price  = Integer.parseInt(multi.getParameter("price"));
-		String description = multi.getParameter("description");
-		String pictureUrl = multi.getFilesystemName("pictureUrl");
+		String director = multi.getParameter("director");
+		String actor = multi.getParameter("actor");
+		String synopsis = multi.getParameter("synopsis");
+		String poster = multi.getFilesystemName("poster");
 		
-		MemberVO pVo = new MemberVO();
-		pVo.setName(name);
+		MovieVO pVo = new MovieVO();
+		pVo.setTitle(title);
 		pVo.setPrice(price);
-		pVo.setDescription(description);
-		pVo.setPictureurl(pictureUrl);
+		pVo.setDirector(director);
+		pVo.setActor(actor);
+		pVo.setSynopsis(synopsis);
+		pVo.setPoster(poster);
 		
-		ProductDAO pDao = ProductDAO.getInstance();
-		int result = pDao.insertProduct(pVo);
+		MovieDAO pDao = MovieDAO.getInstance();
+		int result = pDao.insertMovie(pVo);
 		if( result == 1) {
-				response.sendRedirect("ProductList.do");
+				response.sendRedirect("movieList.do");
 		}else{
-				response.sendRedirect("/product/productWrite.jsp");
+				response.sendRedirect("/movie/movieWrite.jsp");
 		}
 	}
 

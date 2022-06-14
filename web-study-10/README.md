@@ -38,5 +38,9 @@ DBCP---\
               url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
               username="scott" password="tiger" maxTotal="20" maxIdle="10"
               maxWaitMillis="-1"/>
+              
+              
+ *  특징
+ 10. cos.jar (version:cos-22.05.zip) 통한 파일 upload
 
 

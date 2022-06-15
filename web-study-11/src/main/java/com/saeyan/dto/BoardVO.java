@@ -27,9 +27,9 @@ public class BoardVO {
 	private String pass;
 	private String name;
 	private String email;
-	private String titlel;
+	private String title;
 	private String content;
-	private Integer readcound;
+	private Integer readcount;
 	private Timestamp writedate;
 	
 }

@@ -21,6 +21,8 @@ public class ActionFactory {
 		
 		if(command.equals("board_list")) {
 			action = new BoardListAction();
+		}else if(command.equals("board_update")){
+			//action = new BoardUpdateAction();
 		}
 		return action;
 	}

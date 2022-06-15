@@ -36,9 +36,9 @@ public class BoardDAO {
 				vo.setPass(rs.getString(2));
 				vo.setName(rs.getString(3));
 				vo.setEmail(rs.getString(4));
-				vo.setTitlel(rs.getString(5));
+				vo.setTitle(rs.getString(5));
 				vo.setContent(rs.getString(6));
-				vo.setReadcound(rs.getInt(7));
+				vo.setReadcount(rs.getInt(7));
 				vo.setWritedate(rs.getTimestamp(8));
 				
 				list.add(vo);

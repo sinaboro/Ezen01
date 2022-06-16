@@ -18,7 +18,6 @@ public class DBManager {
 			DataSource ds = (DataSource) envContext.lookup("jdbc/myoracle");
 			// ds가 생성되었으므로 Connection을 구합니다.
 			conn = ds.getConnection();
-			System.out.println("DB연결 성공");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

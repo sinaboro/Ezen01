@@ -20,7 +20,6 @@ public class BoardServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String command = request.getParameter("command");
-			System.out.println("요청 command : " + command);
 			
 			ActionFactory af = ActionFactory.getInstance();
 			Action action = af.getAction(command);

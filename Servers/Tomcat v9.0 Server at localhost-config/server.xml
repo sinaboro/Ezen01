@@ -117,23 +117,10 @@
 					directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b"
 					prefix="localhost_access_log" suffix=".txt" />
 
-				<Context docBase="web-study-11" path="/web-study-11"
-					reloadable="true" source="org.eclipse.jst.jee.server:web-study-11">
-					<Resource auth="Container"
-						driverClassName="oracle.jdbc.OracleDriver" maxIdle="10"
-						maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle"
-						password="tiger" type="javax.sql.DataSource"
-						url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="scott" />
-				</Context>
-				<Context docBase="web-study-11-Exam01"
-					path="/web-study-11-Exam01" reloadable="true"
-					source="org.eclipse.jst.jee.server:web-study-11-Exam01" >
-					<Resource auth="Container"
-						driverClassName="oracle.jdbc.OracleDriver" maxIdle="10"
-						maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle"
-						password="tiger" type="javax.sql.DataSource"
-						url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="scott" />
-				</Context>
+
+
+				<Context docBase="BoardWeb" path="/BoardWeb"
+					reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb" />
 			</Host>
 		</Engine>
 	</Service>

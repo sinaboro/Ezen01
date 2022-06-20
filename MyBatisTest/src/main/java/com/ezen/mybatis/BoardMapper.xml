@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezen.mybatis.BoardMethod">
+  
+  <select id="selectOne" resultType="com.ezen.mybatis.BoardVO" 
+  		parameterType="int">
+    select * 
+    from board 
+    where id = #{id}
+  </select>
+  
+  <select id="selectAllMember" resultType="com.ezen.mybatis.BoardVO">
+  	select * from board
+  </select>
+  
+  <delete id="deleteBoard">
+  	delete from board where id = #{id}
+  </delete>
+  
+  <insert id="insertBoard" parameterType="com.ezen.mybatis.BoardVO">
+  	insert into board 
+  	values(#{id}, #{name}, #{phone}, #{address})
+  </insert>
+  
+  <update id="updateBoard" parameterType="com.ezen.mybatis.BoardVO">
+  	update board set 
+	name= #{name}, phone=#{phone}, address=#{address}
+	where id = #{id}
+  </update>
+</mapper>

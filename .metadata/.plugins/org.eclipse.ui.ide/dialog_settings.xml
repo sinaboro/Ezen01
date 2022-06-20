@@ -117,6 +117,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Works\Ezen01\BoardWeb"/>
+			<item value="C:\Works\Ezen01\web-study-08"/>
+			<item value="C:\Works\Ezen01\web-study-12-finish"/>
+			<item value="C:\Works\Ezen01\web-study-11"/>
 			<item value="C:\works\JSPBasicProject3"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

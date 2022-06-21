@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Circle"/>
-    <fullyQualifiedTypeName name="Rectangle"/>
-    <fullyQualifiedTypeName name="SingletonTest"/>
-    <fullyQualifiedTypeName name="Singleton"/>
-    <fullyQualifiedTypeName name="com.ezen.D"/>
-    <fullyQualifiedTypeName name="com.ezen.ex01.Rectangle"/>
     <fullyQualifiedTypeName name="com.ezen01.Card"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
@@ -58,6 +52,12 @@
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.ezen.mybatis.BoardVO"/>
+    <fullyQualifiedTypeName name="polymorphism.BeanFactory"/>
+    <fullyQualifiedTypeName name="polymorphism.SoniTV"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="polymorphism.SamsungTV"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
 </qualifiedTypeNameHistroy>

@@ -1,7 +1,7 @@
 package polymorphism;
 
 public class BeanFactory {
-	public TV getBean(String beanName) {
+	public Object getBean(String beanName) {
 		if (beanName.equals("samsung")) {
 			return new SamsungTV();
 		} else if (beanName.equals("lg")) {

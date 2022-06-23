@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/springbook/biz/board/BoardServiceClient.java=UTF-8
+encoding//src/main/java/com/springbook/biz/user/UserSerViceClient.java=UTF-8
 encoding//src/main/java/com/springbook/ioc/injection/CollectionBeanClient.java=UTF-8
 encoding//src/main/java/polymorphism/TVUser.java=UTF-8

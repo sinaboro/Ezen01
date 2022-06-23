@@ -33,6 +33,7 @@
 		<item key="updateTextualMatches" value="false"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
+		<item key="renameSubpackages" value="false"/>
 	</section>
 	<section name="SourceActionDialog.methods">
 		<item key="VisibilityModifier" value="1"/>
@@ -118,7 +119,7 @@
 	<section name="JarPackageWizard">
 		<item key="JarPackageWizardPage.EXPORT_CLASS_FILES" value="true"/>
 		<item key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER" value="false"/>
-		<item key="JarPackageWizardPage.EXPORT_JAVA_FILES" value="true"/>
+		<item key="JarPackageWizardPage.EXPORT_JAVA_FILES" value="false"/>
 		<item key="JarPackageWizardPage.REFACTORINGS" value="false"/>
 		<item key="JarPackageWizardPage.COMPRESS" value="true"/>
 		<item key="JarPackageWizardPage.INCLUDE_DIRECTORY_ENTRIES" value="false"/>

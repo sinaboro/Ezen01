@@ -4,26 +4,42 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
 	<context:component-scan base-package="com.springbook.biz">
 	</context:component-scan>
 	
-	<bean id="log" class="com.springbook.biz.common.Log4jAdvice"/>
-	<bean id="afterReturning" class="com.springbook.biz.common.AfterReturningAdvice"/>
-	<bean id="atferThrowing" class="com.springbook.biz.common.AfterThrowingAdvice"/>
-	<bean id="around" class="com.springbook.biz.common.AroundAdvice"/>
-	<bean id = "beforeAdvice" class="com.springbook.biz.common.BeforeAdvice"/>
+	<context:property-placeholder location="classpath:config/database.properties"/>
+	
+	<bean id="dataSource"  class="org.apache.commons.dbcp.BasicDataSource"
+			destroy-method="close">
+			<property name="driverClassName"  value="${jdbc.driver}"/>
+			<property name="url" value="${jdbc.url}"/>
+			<property name="username" value="${jdbc.username}"/>
+			<property name="password" value="${jdbc.password}"/>
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource"  ref="dataSource"></property>
+	</bean>
+	
+	<bean id="txtManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<tx:advice id="txAdvice"  transaction-manager="txtManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true"/>
+			<tx:method name="*"/>
+		</tx:attributes>
+	</tx:advice>
 	
 	<aop:config>
-		<aop:pointcut expression="execution(* com.springbook.biz..*Impl.*(..))" 
-			id="allPointcut"/>
-		
-		<aop:aspect ref="around">
-			<aop:around pointcut-ref="allPointcut" method="aroundLog" /> 
-			 
-		</aop:aspect>
+		<aop:pointcut expression="execution(* com.springbook.biz..*(..))" id="txPointcut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
 </beans>

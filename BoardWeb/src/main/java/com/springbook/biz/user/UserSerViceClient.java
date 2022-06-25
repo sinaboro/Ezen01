@@ -7,7 +7,7 @@ public class UserSerViceClient {
 
 	public static void main(String[] args) {
 		AbstractApplicationContext container = 
-				new GenericXmlApplicationContext("applicationContext.xml");
+				new GenericXmlApplicationContext("applicationContext2.xml");
 		UserService userService = (UserService) container.getBean("userService");
 		
 		UserVO vo = new UserVO();

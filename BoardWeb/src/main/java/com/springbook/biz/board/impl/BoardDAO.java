@@ -28,6 +28,8 @@ public class BoardDAO {
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> JDBC로 insertBoard() 기능 처리");
 		try {
+//	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) "
+//			+ "values((select nvl(max(seq), 0)+1 from board),?,?,?)";
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_INSERT);
 			stmt.setString(1, vo.getTitle());

@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="com.saeyan.dao.EmployeesDAO"/>
-    <fullyQualifiedTypeName name="com.saeyan.dto.EmployeesVO"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.ToString"/>
-    <fullyQualifiedTypeName name="org.aspectj.lang.ProceedingJoinPoint"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
@@ -16,7 +7,6 @@
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
     <fullyQualifiedTypeName name="com.springbook.biz.board.impl.BoardDAOSpring"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
     <fullyQualifiedTypeName name="com.ezen.mybatis.BoardVO"/>
     <fullyQualifiedTypeName name="polymorphism.BeanFactory"/>
@@ -24,7 +14,6 @@
     <fullyQualifiedTypeName name="polymorphism.SamsungTV"/>
     <fullyQualifiedTypeName name="com.ezen.util.Calc"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
     <fullyQualifiedTypeName name="polymorphism.SonySpeaker"/>
     <fullyQualifiedTypeName name="org.springframework.web.context.support.GenericWebApplicationContext"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
@@ -33,14 +22,11 @@
     <fullyQualifiedTypeName name="buildTest.Calc02"/>
     <fullyQualifiedTypeName name="polymorphism.Speaker"/>
     <fullyQualifiedTypeName name="polymorphism.AppleSpeaker"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
     <fullyQualifiedTypeName name="javax.annotation.Resource"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="com.springbook.biz.board.BoardService"/>
     <fullyQualifiedTypeName name="com.springbook.biz.board.BoardServiceClient"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.springbook.biz.user.impl.UserDAO"/>
@@ -53,11 +39,25 @@
     <fullyQualifiedTypeName name="com.springbook.biz.board.impl.BoardDAO"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
     <fullyQualifiedTypeName name="com.springbook.biz.board.BoardVO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.StringJoiner"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringJUnit4ClassRunner"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
+    <fullyQualifiedTypeName name="java.awt.dnd.DragGestureEvent"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
     <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Select"/>
+    <fullyQualifiedTypeName name="com.zerock.mapper.TimeMapper"/>
 </qualifiedTypeNameHistroy>

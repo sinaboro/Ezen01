@@ -13,7 +13,7 @@ public class BoardServiceClient {
 		//BoardService boardService = container.getBean("boardService", BoardService.class);
 		
 		BoardVO vo = new BoardVO();
-		vo.setSeq(100);
+		//vo.setSeq(100);
 		vo.setTitle("불별의 이순신2");
 		vo.setWriter("이순신2");
 		vo.setContent("임진왜란2~~~~");

@@ -105,7 +105,7 @@
 
 
 				
-			<Context docBase="EzenEx02" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:EzenEx02"/></Host>
+			<Context docBase="EzenEx02" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:EzenEx02"/><Context docBase="BoardWeb" path="/" reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb"/></Host>
 		</Engine>
 	</Service>
 </Server>

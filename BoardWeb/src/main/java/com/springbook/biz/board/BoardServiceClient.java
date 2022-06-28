@@ -19,7 +19,7 @@ public class BoardServiceClient {
 		vo.setContent("임진왜란2~~~~");
 		boardService.insertBoard(vo);
 		
-		List<BoardVO> boardList = boardService.getBoardList();
+		List<BoardVO> boardList = boardService.getBoardList(vo);
 		
 		for(BoardVO board : boardList) {
 			System.out.println("---->  " + board.toString());

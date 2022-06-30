@@ -2,5 +2,15 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	
+
+<servlet>
+	<servlet-name>action</servlet-name>
+	<servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>action</servlet-name>
+	<url-pattern>*.do</url-pattern>
+</servlet-mapping>
+
 </web-app>

@@ -31,9 +31,31 @@ public class BoardServiceTests {
 		BoardVO vo =  new BoardVO();
 		vo.setTitle("Jsp");
 		vo.setContent("MVC2 Study");
-		vo.setWriter("ȫ�浿");
+		vo.setWriter("홍길동");
 		service.register(vo);
 		log.info("-------------------------------");
-		log.info("������ ��ȣ : " + vo.getBno());
+		log.info("생성된 번호는 : " + vo.getBno());
+	}
+	
+	@Test
+	public void testGet() {
+		log.info("------------------------");
+		log.info("testGet : " +  service.get(41L));
+	}
+	
+	@Test
+	public void testUpdate() {
+		log.info("------------------------");
+		BoardVO vo = service.get(41L);
+		
+		if(vo == null ) return ;
+		vo.setTitle("제목을 수정합니다.");
+		log.info("modify : " + service.modify(vo));
+	}
+	
+	@Test
+	public void testDelete() {
+		log.info("------------------------");
+		log.info("delete : " + service.remove(44L));
 	}
 }

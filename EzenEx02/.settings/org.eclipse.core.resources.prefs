@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+encoding//src/test/java/com/ezen/Service/BoardServiceTests.java=UTF-8
+encoding//src/test/java/com/ezen/controller/BoardControllerTests.java=UTF-8
 encoding//src/test/java/com/ezen/mapper/BoardmapperTests.java=UTF-8

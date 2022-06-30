@@ -53,9 +53,39 @@ public class BoardControllerTests {
 		log.info(
 				mockMvc.perform(
 						MockMvcRequestBuilders.post("/board/register")
-						.param("title", "범죄도시2")
-						.param("content", "마동석 주연 액션 영화 Abc")
+						.param("title", "범죄도시")
+						.param("content", "마동석 주연 액션 영화")
 						.param("writer", "마동석")
+						)
+				.andReturn()
+				.getModelAndView()
+				.getModelMap()
+				);
+	}
+	
+	@Test
+	public void testGet() throws Exception {
+
+		log.info(
+				mockMvc.perform(
+						MockMvcRequestBuilders.get("/board/get")
+						.param("bno", "62"))
+						.andReturn()
+						.getModelAndView()
+						.getModelMap()
+				);
+	}
+	
+	@Test
+	public void testModify() throws Exception {
+		
+		log.info(
+				mockMvc.perform(
+						MockMvcRequestBuilders.post("/board/modify")
+						.param("bno", "62")
+						.param("title", "AAA")
+						.param("content", "BBB")
+						.param("writer", "마동석2")
 						)
 				.andReturn()
 				.getModelAndView()

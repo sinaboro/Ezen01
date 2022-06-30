@@ -1,5 +1,7 @@
 package com.ezen.controller;
 
+import java.io.Reader;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,5 +39,20 @@ public class BoardController {
 		rttr.addFlashAttribute("result", board.getBno());
 		return "redirect:/board/list";
 	}
-
+	
+	@GetMapping("/get")
+	public void get(Long bno, Model model) {
+		log.info("--------get------------");
+		model.addAttribute("board", service.get(bno));
+	}
+	
+	@PostMapping("/modify")
+	public String modify(BoardVO board, RedirectAttributes rttr) {
+		log.info("--------modify----------");
+		int cnt = service.modify(board);
+		if(cnt == 1) {
+			rttr.addFlashAttribute("result","success");
+		}
+		return "redirect:/board/list";
+	}
 }

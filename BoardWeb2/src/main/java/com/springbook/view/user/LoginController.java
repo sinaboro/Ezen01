@@ -1,26 +1,33 @@
 package com.springbook.view.user;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.springbook.biz.board.BoardVO;
-import com.springbook.biz.board.impl.BoardDAO;
 import com.springbook.biz.user.UserVO;
 import com.springbook.biz.user.impl.UserDAO;
 
 @Controller
-public class LoginController  {
+public class LoginController {
 
-	@RequestMapping("/login.do")
-	public String login(UserVO vo, UserDAO UserDAO){
-			if(UserDAO.getUser(vo) != null) {
-				return "getBoardList.do";
-			}else {
-				return "login.jsp";
-			}
+	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+	public String loginView(@ModelAttribute("user") UserVO vo) {
+		System.out.println("로그인 화면으로 이동...");
+		vo.setId("test");
+		vo.setPassword("test123");
+		return "login.jsp";
+	}
+
+	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	public String login(UserVO vo, UserDAO userDAO, HttpSession session) {
+		UserVO user = userDAO.getUser(vo);
+		if (user != null) {
+			session.setAttribute("userName", user.getName());
+			return "getBoardList.do";
+		} else
+			return "login.jsp";
 	}
 }

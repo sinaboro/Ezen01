@@ -6,9 +6,10 @@ import java.sql.ResultSet;
 
 import org.springframework.stereotype.Repository;
 
+import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.user.UserVO;
-import com.springbook.biz.common.*;
 
+// DAO(Data Access Object)
 @Repository("userDAO")
 public class UserDAO {
 	// JDBC 관련 변수

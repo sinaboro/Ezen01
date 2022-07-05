@@ -14,11 +14,11 @@
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
 					<td bgcolor="orange">아이디</td>
-					<td><input type="text" name ="id"/></td>
+					<td><input type="text" name ="id" value="${user.id}"/></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">비밀번호</td>
-					<td><input type="password" name ="password"/></td>
+					<td><input type="password" name ="password" value="${user.password }"/></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">

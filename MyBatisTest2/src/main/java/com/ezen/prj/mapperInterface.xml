@@ -6,7 +6,11 @@
 <mapper namespace="com.ezen.prj.mapperInterface">
   
   <select id="selectOne" resultType="com.ezen.prj.BoardVO"  parameterType="int">
-    select * from board where id = #{id}
+    select * from board 
+    where id = #{id}
   </select>
   
+  <insert id="insertBoard" parameterType="">
+  	
+  </insert>
 </mapper>

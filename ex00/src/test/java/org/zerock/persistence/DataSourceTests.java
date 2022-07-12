@@ -28,23 +28,21 @@ public class DataSourceTests {
 	@Test
 	public void testConnection() {
 		try(Connection con = dataSource.getConnection()){
+			log.info("--------------------------------------");
 			log.info(con);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 	@Test
 	public void testMybatis() {
-		try(SqlSession session = sqlSessionFactory.openSession();
-				Connection con = session.getConnection()){
-			log.info("-------------------------------");
+		try( SqlSession session = sqlSessionFactory.openSession(); 
+				Connection con = session.getConnection() 	){
+			log.info("--------------------------------------");
 			log.info(con);
 			log.info(session);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
 }

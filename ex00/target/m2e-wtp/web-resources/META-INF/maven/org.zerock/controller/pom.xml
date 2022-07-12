@@ -7,12 +7,14 @@
 	<name>ex00</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+	
 	<properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>5.2.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
+	
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -27,24 +29,22 @@
 				 </exclusion>
 			</exclusions>
 		</dependency>
+	
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
@@ -76,7 +76,7 @@
 			<version>${org.slf4j-version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+	
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -115,16 +115,16 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>       
-		
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		</dependency>  
+
+<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
     <version>1.18.24</version>
     <scope>provided</scope>
 </dependency>
-		
+
 <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc8 -->
 <dependency>
     <groupId>com.oracle.database.jdbc</groupId>
@@ -132,7 +132,7 @@
     <version>21.6.0.0.1</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP  커넥션풀-->
+<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 <dependency>
     <groupId>com.zaxxer</groupId>
     <artifactId>HikariCP</artifactId>
@@ -160,7 +160,7 @@
     <version>1.16</version>
 </dependency>
 
-
+      
 	</dependencies>
     <build>
         <plugins>

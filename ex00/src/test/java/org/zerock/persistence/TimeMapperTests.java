@@ -19,14 +19,14 @@ public class TimeMapperTests {
 	
 	@Test
 	public void testGetTime() {
-		log.info("------------------------------");
-		log.info("info1 : " + timeMapper.getClass().getName());
-		log.info("info2 : " + timeMapper.getTime());
+		log.info("-------------------------------------");
+		log.info(timeMapper.getClass().getName());
+		log.info(timeMapper.getTime());
 	}
 	@Test
 	public void testGetTime2() {
-		log.info("------------------------------");
-		log.info("info1 : " + timeMapper.getClass().getName());
-		log.info("getTime2 : " + timeMapper.getTime2());
+		log.info("-------------------------------------");
+		log.info(timeMapper.getClass().getName());
+		log.info(timeMapper.getTime2());
 	}
 }

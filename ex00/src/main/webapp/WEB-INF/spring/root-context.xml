@@ -5,21 +5,35 @@
 	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-	<bean	id= "hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-		<property name="driverClassName"  value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-		<property name="jdbcUrl"  value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"></property>
-		<property name="username" value="book2"></property>
-		<property name="password" value="1234"></property>
-	</bean>
+	<!-- <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+ 		<property name="driverClassName" value="oracle.jdbc.pool.OracleDataSource"></property>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@URL주소:1521:시드명"></property> 
+         Oracle 11g 경우 value="jdbc:oracle:thin:@URL주소:1521:XE"
+         Oracle 19  경우 value="jdbc:oracle:thin:@URL주소:1521:orcl"
+		<property name="username" value="계정명"></property>
+		<property name="password" value="비밀번호"></property>
+	</bean>	
 	
-	<bean  id="dataSource" class="com.zaxxer.hikari.HikariDataSource"  destroy-method="close">
+	<bean id="datasource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<constructor-arg ref="hikariConfig"></constructor-arg>
+	</bean>	 -->	
+	
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName"  value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="book2" />
+		<property name="password" value="1234" />
 	</bean>
 	
-	<bean  id = "sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource"  ref="dataSource"></property>
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
 	<mybatis-spring:scan base-package="org.zerock.mapper"/>
+	
+	
 </beans>

@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
+encoding//src/test/java/org/zerock/controller/BoardControllerTests.java=UTF-8
 encoding//src/test/java/org/zerock/mapper/BoardMapperTests.java=UTF-8
 encoding//src/test/java/org/zerock/service/BoardServiceImpleTests.java=UTF-8

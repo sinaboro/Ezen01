@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
@@ -30,12 +30,14 @@
 	 	<c:forEach items="${list}" var="board"> 
 		    <tbody>
 		      <tr>
-		        <td>${board.bno }</td>
-		        <td>${board.title }</td>
-		        <td>${board.content }</td>
-		        <td>${board.writer }</td>
-		        <td>${board.regdate }</td>
-		        <td>${board.updatedate }</td>
+		        <td><c:out value="${board.bno }" /> </td>
+		        <td><c:out value="${board.title }" /> </td>
+		        <td><c:out value="${board.content }" /> </td>
+		        <td><c:out value="${board.writer }" /> </td>
+		        <%-- <td><c:out value="${board.regdate }" /> </td> --%>
+		        <td><fmt:formatDate  pattern="yyyy-MM-dd" value="${board.regdate }" /> </td>
+		        <td><fmt:formatDate  pattern="yyyy-MM-dd" value="${board.updatedate }" /> </td>
+		        <%-- <td><c:out value="${board.updatedate }" /> </td> --%>
 		      </tr>
 		    </tbody>
 	    </c:forEach>

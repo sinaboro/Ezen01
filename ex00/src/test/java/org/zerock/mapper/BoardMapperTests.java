@@ -45,20 +45,20 @@ public class BoardMapperTests {
 	}
 	@Test
 	public void testread() {
-		BoardVO vo = mapper.read(29L);
+		BoardVO vo = mapper.read(42L);
 		log.info(vo);
 	}
 	@Test
 	public void testdelete() {
-		log.info("delete count : "+mapper.delete(27L) );
+		log.info("delete count : "+mapper.delete(42L) );
 	}
 	@Test
 	public void testupdate() {
 		BoardVO vo  =  new BoardVO();
-		vo.setBno(26L);
-		vo.setTitle("오라클2");
-		vo.setContent("오라클2");
-		vo.setWriter("오라클2");
+		vo.setBno(21L);
+		vo.setTitle("자바2");
+		vo.setContent("자바2");
+		vo.setWriter("자바2");
 		log.info("update : " +   mapper.update(vo) );
 	}
 	

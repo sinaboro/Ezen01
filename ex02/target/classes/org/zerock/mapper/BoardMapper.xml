@@ -15,4 +15,33 @@
   <delete id="delete">
   	delete from tbl_board where bno=#{bno}
   </delete>
+  
+  <insert id="insert" >
+  		insert into TBL_BOARD(bno, title, content, writer)
+		values(seq_board.nextval, #{title}, #{content}, #{writer})
+  </insert>
+  
+  <insert id="insertSelectKey" >
+       
+       <selectKey keyProperty="bno" order="BEFORE" resultType="long">
+       		select seq_board.nextval from dual
+       </selectKey>
+  
+  		insert into TBL_BOARD(bno, title, content, writer)
+		values(#{bno}, #{title}, #{content}, #{writer})
+  </insert>
+  
+  <update id="update" >
+  	update tbl_board
+	set title=#{title},
+	content = #{content},
+	writer = #{writer},
+	updatedate = sysdate
+	where bno = #{bno}
+  </update>
+  
+  
+  
+  
+  
 </mapper>

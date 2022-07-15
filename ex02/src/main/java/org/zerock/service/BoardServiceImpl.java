@@ -30,7 +30,7 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public int modify(BoardVO vo) {
-		return 0;
+		return mapper.update(vo);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public List<BoardVO> getList() {
-		return null;
+		return mapper.getList();
 	}
 	
 }

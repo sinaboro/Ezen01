@@ -36,7 +36,24 @@ public class BoardServiceTests {
 	@Test
 	public void testDelete() {
 		//service.remove(24L);
-		log.info("삭제된 개수  : " + 	service.remove(24L));
+		log.info("삭제된 개수  : " + 	service.remove(7L));
+	}
+
+	@Test
+	public void testGetList() {
+		service.getList();
+		log.info("----------------------------");
+	}
+
+	@Test
+	public void testModify() {
+		BoardVO vo = new BoardVO();
+		vo.setBno(21L);
+		vo.setTitle("홍길동");
+		vo.setContent("도둑이야기...........");
+		vo.setWriter("허균");
+		service.modify(vo);
+		log.info("수정된 데이타 : " + service.modify(vo));
 	}
 	
 	

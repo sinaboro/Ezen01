@@ -11,6 +11,7 @@ import org.zerock.service.BoardService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
+import oracle.jdbc.proxy.annotation.Post;
 
 
 @Controller
@@ -41,9 +42,23 @@ public class BoardController {
 		model.addAttribute("board", service.get(bno));
 	}
 	
+	@PostMapping("/remove")
+	public String remove(Long bno, RedirectAttributes rttr) {
+		log.info("delete---------" + bno);
+		if(service.remove(bno)==1) {
+			rttr.addFlashAttribute("result", "success");
+		}
+		return "redirect:/board/list";
+	}
 	
-	
-	
+	@PostMapping("/modify")
+	public String modify(BoardVO vo, RedirectAttributes rttr) {
+		log.info("modify : " + vo);
+		if( service.modify(vo) == 1) {
+			rttr.addFlashAttribute("result", "success");
+		}
+		return "redirect:/board/list";
+	}
 	
 	
 	

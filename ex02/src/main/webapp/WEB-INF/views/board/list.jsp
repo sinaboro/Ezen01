@@ -17,6 +17,9 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                            Board List Page
+                           <button id="regBtn" type="button" class="btn btn-xs pull-right">
+                           		Register New Board
+                           </button>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -30,15 +33,19 @@
                                         <th>변경일</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                               <c:forEach items="${list}" var="board">
                                     <tr class="odd gradeX">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 4.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">4</td>
-                                        <td class="center">X</td>
+                                        <td><c:out value="${board.bno}" /> </td>
+                                        <td><c:out value="${board.title}" /> </td>
+                                        <td><c:out value="${board.writer}" /> </td>
+                                         <td>
+                                         	<fmt:formatDate pattern="yyyy-MM-dd"  value="${board.regdate}"/>
+                                         </td>
+                                         <td>
+                                         	<fmt:formatDate pattern="yyyy-MM-dd"  value="${board.updatedate}"/>
+                                         </td>
                                     </tr>
-                                </tbody>
+                                </c:forEach>   
                             </table>
                             <!-- /.table-responsive -->
                         </div>

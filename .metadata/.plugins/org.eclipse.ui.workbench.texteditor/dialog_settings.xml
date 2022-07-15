@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="getConn"/>
+		<item key="selection" value="close"/>
 		<list key="findhistory">
+			<item value="close"/>
+			<item value="setDriverClassName"/>
 			<item value="getConn"/>
 			<item value="servlet"/>
 			<item value="DataSource"/>
@@ -21,8 +23,6 @@
 			<item value="Student"/>
 			<item value="age"/>
 			<item value="String src = &quot;ABCDE&quot;;"/>
-			<item value="//1+(-2)+3+(-4)+... 과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100이상이 되는지 구하시오"/>
-			<item value="float pi = 3.14159f;    //3.141"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Car5"/>

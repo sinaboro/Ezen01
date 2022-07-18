@@ -38,14 +38,12 @@
 								<input class="form-control"  name="writer"  readonly="readonly" value='<c:out value="${board.writer}"/>' ><br>
 							</div>
 						    
-						    <button data-oper='modify' class="btn btn-default">
-     							   <a href="/board/modify?bno=<c:out value="${board.bno}"/>">
-     							   		Modify
-     							   	</a>
-     						</button>
-						     
-						    <button data-oper=' list'  class="btn btn-info" >
-						    <a href = "/board/list" >List</button>
+						    <button data-oper='modify' class="btn btn-default">Modify</button>
+						    <button data-oper=' list'  class="btn btn-info" > List</button>
+						    
+						    <form id='operForm'  action = "/board/modify" method="get">
+						    	<input type="hidden"  id="bno"  name="bno"  value='<c:out value="${board.bno }"/>' >
+						     </form>
 						    
                         </div>
                         <!-- /.panel-body -->
@@ -56,4 +54,28 @@
             </div>
             <!-- /.row -->
             
+  <script>
+  		var operForm = $("#operForm");
+  		
+  		$("button[data-oper='modify' ]").on("click", function(e){
+  			operForm.attr("action", "/board/modify").submit();
+  		});
+
+  		$("button[data-oper=' list']").on("click", function(e){
+  			operForm.find("#bno").remove();
+  			operForm.attr("action", "/board/list").submit();
+  		});
+  		
+  </script>       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
  <%@ include file="../includes/footer.jsp" %>

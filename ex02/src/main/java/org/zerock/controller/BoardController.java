@@ -41,15 +41,15 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	@GetMapping("/get")
+	@GetMapping({"/get", "/modify"})
 	public void get(Long bno, Model model) {
-		log.info("get.....................");
+		log.info("--------------get or modify--------------");
 		model.addAttribute("board", service.get(bno));
 	}
 	
 	@PostMapping("/remove")
 	public String remove(Long bno, RedirectAttributes rttr) {
-		log.info("delete---------" + bno);
+		log.info("remove---------" + bno);
 		if(service.remove(bno)==1) {
 			rttr.addFlashAttribute("result", "success");
 		}

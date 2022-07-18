@@ -38,11 +38,15 @@
 								<input class="form-control"  name="writer"  readonly="readonly" value='<c:out value="${board.writer}"/>' ><br>
 							</div>
 						    
-						    <button data-oper=' modify'   class="btn btn-default"
-						    onclick="location.href = '/board/modify?bno= <c:out value="${board.bno}" />' ">
-						    Modify</button>
+						    <button data-oper='modify' class="btn btn-default">
+     							   <a href="/board/modify?bno=<c:out value="${board.bno}"/>">
+     							   		Modify
+     							   	</a>
+     						</button>
+						     
+						    <button data-oper=' list'  class="btn btn-info" >
+						    <a href = "/board/list" >List</button>
 						    
-						    <button data-oper=' list'  class="btn btn-info"  onclick="location.href= '/board/list'  ">List</button>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -52,45 +56,4 @@
             </div>
             <!-- /.row -->
             
- <!-- 여기부터 시작............ -->
-<!--  <div class="modal" tabindex="-1" role="dialog" id="myModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        처리가 완료되었습니다.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
- -->
- <!-- <script>
- 	$(document).ready(function(){
- 		var result = '<c:out value="${result}" />'
- 		
- 		checkModal(result);
- 		function checkModal(result){
- 			if(result == ' '){
- 				return;
- 			}
- 			if(parseInt(result) > 0 ){
- 				$(".modal-body").html("게시글 " + parseInt(result) + " 번이 등록되었습니다.");
- 			}
- 			$("#myModal").modal("show");
- 		}
- 		
- 		$("#regBtn").on("click", function(){
- 			self.location = "/board/register";
- 		});
- 	});
- </script>    -->
  <%@ include file="../includes/footer.jsp" %>

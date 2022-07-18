@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="close"/>
+		<item key="selection" value="Striped "/>
 		<list key="findhistory">
+			<item value="Striped "/>
+			<item value="Kitchen "/>
+			<item value="../"/>
 			<item value="close"/>
 			<item value="setDriverClassName"/>
 			<item value="getConn"/>
@@ -20,11 +23,9 @@
 			<item value="url"/>
 			<item value="h4"/>
 			<item value="Car"/>
-			<item value="Student"/>
-			<item value="age"/>
-			<item value="String src = &quot;ABCDE&quot;;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/resources/"/>
 			<item value="Car5"/>
 			<item value="Student2"/>
 		</list>

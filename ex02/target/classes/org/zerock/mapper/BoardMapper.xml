@@ -53,6 +53,7 @@
 	    ]]>
   </select>
   
+  <!-- /*+ index_desc(tbl_board pk_board) */ --> 
   
   
 </mapper>

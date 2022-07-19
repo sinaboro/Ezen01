@@ -67,8 +67,8 @@ public class BoardMapperTests {
 	@Test
 	public void testPaging() {
 		Criteria cri = new Criteria();
-		cri.setPageNum(3);
-		cri.setAmount(10);
+		cri.setPageNum(4);
+		cri.setAmount(15);
 		List<BoardVO> list = mapper.getListWithPagging(cri);
 		log.info(list);
 	}

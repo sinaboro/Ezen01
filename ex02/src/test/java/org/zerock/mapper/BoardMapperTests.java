@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
+import org.zerock.domain.PageDTO;
 import org.zerock.persistence.TimeMapperTests;
 
 import lombok.extern.log4j.Log4j;
@@ -73,6 +74,14 @@ public class BoardMapperTests {
 		log.info(list);
 	}
 	
+	@Test
+	public void testPageDTO() {
+		Criteria cri =  new Criteria();
+		cri.setPageNum(15);
+		cri.setAmount(10);
+		PageDTO pageDTO = new PageDTO(cri, 315);
+		log.info(pageDTO);
+	}
 }
 
 

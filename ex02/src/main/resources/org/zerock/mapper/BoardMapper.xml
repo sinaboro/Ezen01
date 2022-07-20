@@ -53,6 +53,9 @@
 	    ]]>
   </select>
   
+  <select id="getTotalCount"  resultType="int">
+  	select count(*) from tbl_board where bno>0
+  </select>
   <!-- /*+ index_desc(tbl_board pk_board) */ --> 
   
   

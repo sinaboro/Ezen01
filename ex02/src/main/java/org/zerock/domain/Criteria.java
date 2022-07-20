@@ -15,6 +15,10 @@ public class Criteria {
 	private String type;
 	private String keyword;
 	
+	public String[] getTypeArr() {
+		return type == null ? new String[] {} :  type.split("");
+	}
+	
 	public Criteria() {
 		this(1, 10);
 	}
@@ -24,8 +28,7 @@ public class Criteria {
 		this.amount = amount;
 	}
 	
-	public String[] getTypeArr() {
-		return type == null ? new String[] {} : type.split("");
-	}
+	
+	
 	
 }

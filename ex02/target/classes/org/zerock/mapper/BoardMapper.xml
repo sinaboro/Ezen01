@@ -70,7 +70,7 @@
 	       <include refid="criterial"></include>
 	      	
 	     <![CDATA[
-	     	 ROWNUM <= #{pageNum} * #{amount} )
+		     	ROWNUM <= #{pageNum} * #{amount} )
 			where 
 			rn > (#{pageNum}-1) * #{amount}
 		 ]]>

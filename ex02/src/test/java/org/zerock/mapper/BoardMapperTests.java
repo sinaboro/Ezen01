@@ -42,8 +42,8 @@ public class BoardMapperTests {
 	public void testInsert() {
 		BoardVO vo  =  new BoardVO();
 		vo.setTitle("spring2");
-		vo.setContent("��ƴ�2");
-		vo.setWriter("��ſ�2");
+		vo.setContent("spring2");
+		vo.setWriter("spring2");
 		log.info("----------------------------------");
 		log.info("insert : " + mapper.insert(vo));
 	}
@@ -84,34 +84,41 @@ public class BoardMapperTests {
 		PageDTO pageDTO = new PageDTO(cri, 315);
 		log.info(pageDTO);
 	}
-	
-	@Test
-	public void testSearchPaging() {
-		Criteria cri = new Criteria();
-		//cri.setPageNum(4);
-		//cri.setAmount(15);
-		cri.setType("TCW");
-		cri.setKeyword("수원");
-		List<BoardVO> list = mapper.getListWithPagging(cri);
-		log.info(list);
-	}
-	
 	@Test
 	public void testSearchTest() {
 		Map<String, String> map = new HashMap<>();
 		map.put("T", "수원");
-		map.put("C", "java");
-		map.put("W", "남궁성");
+		map.put("C", "bbb");
+		map.put("W", "이젠");
+		
 		
 		Map<String , Map<String, String >> outer = new HashMap<>();
 		
 		outer.put("map", map);
 		List<BoardVO> list =  mapper.searchTest(outer);
 		log.info(list);
-		
-		
 	}
 	
+	@Test
+	public void testSearchPaging() {
+		Criteria cri = new Criteria();
+		cri.setType("TK");   //제목내용 저자
+	    cri.setKeyword("ja");
+		List<BoardVO> list = mapper.getListWithPagging(cri);
+		log.info(list);
+	}
+	
+	@Test
+	public void testTotal() {
+		Criteria cri = new Criteria();
+		cri.setType("TK");   //제목내용 저자
+	    cri.setKeyword("ja");
+	    
+		int count = mapper.getTotalCount(cri);
+		log.info("----------------------------------------");
+		log.info("count : " + count);
+			
+	}
 	
 	
 	

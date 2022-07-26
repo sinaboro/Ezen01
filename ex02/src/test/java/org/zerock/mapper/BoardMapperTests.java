@@ -86,24 +86,25 @@ public class BoardMapperTests {
 	}
 	@Test
 	public void testSearchTest() {
-		Map<String, String> map = new HashMap<>();
-		map.put("T", "수원");
-		map.put("C", "bbb");
-		map.put("W", "이젠");
 		
+		Map<String, String> map = new HashMap<String, String>();
 		
-		Map<String , Map<String, String >> outer = new HashMap<>();
+//		map.put("T",  "수원");
+//		map.put("C",  "jsp");
+//		map.put("W",  "허균");
 		
+		Map<String, Map<String, String>> outer = new HashMap<>();
 		outer.put("map", map);
-		List<BoardVO> list =  mapper.searchTest(outer);
+		List<BoardVO> list = mapper.searchTest(outer);
 		log.info(list);
+		
 	}
 	
 	@Test
 	public void testSearchPaging() {
 		Criteria cri = new Criteria();
-		cri.setType("TK");   //제목내용 저자
-	    cri.setKeyword("ja");
+		//cri.setType("TCW");
+		cri.setKeyword("허균");
 		List<BoardVO> list = mapper.getListWithPagging(cri);
 		log.info(list);
 	}
@@ -111,9 +112,8 @@ public class BoardMapperTests {
 	@Test
 	public void testTotal() {
 		Criteria cri = new Criteria();
-		cri.setType("TK");   //제목내용 저자
-	    cri.setKeyword("ja");
-	    
+	    cri.setType("W");
+	    cri.setKeyword("주말");
 		int count = mapper.getTotalCount(cri);
 		log.info("----------------------------------------");
 		log.info("count : " + count);

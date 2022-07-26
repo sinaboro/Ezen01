@@ -1,11 +1,17 @@
 package org.zerock.mapper;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
+import org.zerock.domain.PageDTO;
 import org.zerock.persistence.TimeMapperTests;
 
 import lombok.extern.log4j.Log4j;
@@ -36,8 +42,8 @@ public class BoardMapperTests {
 	public void testInsert() {
 		BoardVO vo  =  new BoardVO();
 		vo.setTitle("spring2");
-		vo.setContent("æÓ∑∆¥Ÿ2");
-		vo.setWriter("±ËΩ≈øµ2");
+		vo.setContent("spring2");
+		vo.setWriter("spring2");
 		log.info("----------------------------------");
 		log.info("insert : " + mapper.insert(vo));
 	}
@@ -60,6 +66,76 @@ public class BoardMapperTests {
 		log.info("----------------------------------");
 		log.info("insert : " + mapper.update(vo));
 	}
+	
+	@Test
+	public void testPaging() {
+		Criteria cri = new Criteria();
+		cri.setPageNum(4);
+		cri.setAmount(15);
+		List<BoardVO> list = mapper.getListWithPagging(cri);
+		log.info(list);
+	}
+	
+	@Test
+	public void testPageDTO() {
+		Criteria cri =  new Criteria();
+		cri.setPageNum(15);
+		cri.setAmount(10);
+		PageDTO pageDTO = new PageDTO(cri, 315);
+		log.info(pageDTO);
+	}
+	@Test
+	public void testSearchTest() {
+		
+		Map<String, String> map = new HashMap<String, String>();
+		
+//		map.put("T",  "ÏàòÏõê");
+//		map.put("C",  "jsp");
+//		map.put("W",  "ÌóàÍ∑†");
+		
+		Map<String, Map<String, String>> outer = new HashMap<>();
+		outer.put("map", map);
+		List<BoardVO> list = mapper.searchTest(outer);
+		log.info(list);
+		
+	}
+	
+	@Test
+	public void testSearchPaging() {
+		Criteria cri = new Criteria();
+		//cri.setType("TCW");
+		cri.setKeyword("ÌóàÍ∑†");
+		List<BoardVO> list = mapper.getListWithPagging(cri);
+		log.info(list);
+	}
+	
+	@Test
+	public void testTotal() {
+		Criteria cri = new Criteria();
+	    cri.setType("W");
+	    cri.setKeyword("Ï£ºÎßê");
+		int count = mapper.getTotalCount(cri);
+		log.info("----------------------------------------");
+		log.info("count : " + count);
+			
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

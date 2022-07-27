@@ -63,7 +63,19 @@ public class ReplyMapperTests {
 		log.info("cir================: " + cri);
 		List<ReplyVO> replies = mapper.getListWithpaging(cri, bnoArr[0]);
 		log.info(replies);
-		
+	}
+	
+	@Test
+	public void testList2() {
+		Criteria cri = new Criteria(2,10);
+		List<ReplyVO> replies = mapper.getListWithpaging(cri, 10000L);
+		replies.forEach(reply->log.info(replies));
+	}
+	
+	@Test
+	public void testTotalCount() {
+		int count = mapper.getCountByBno(10000L);
+		log.info("count : " + count);
 	}
 	
 }

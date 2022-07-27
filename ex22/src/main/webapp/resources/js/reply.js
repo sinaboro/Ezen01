@@ -25,15 +25,33 @@ var replyService = ( function(){
         })
     }
 
+    // function getList(param, callback, error){
+    //     var bno = param.bno;
+    //     var page = param.page || 1;
+
+    //     $.getJSON( "/replies/pages/" + bno + "/" + page + ".json", 
+    //         function(data) {
+    //             console.log("data : " + data);
+    //             if(callback){
+    //                 callback(data);
+    //             }
+    //          }).fail(function(xhr, status, err){
+    //             if(error){
+    //                 error();
+    //             }else{
+    //                 alert("데이터 가져 오기 실패!!");
+    //             }
+    //          });
+    // }
+    
     function getList(param, callback, error){
         var bno = param.bno;
         var page = param.page || 1;
 
         $.getJSON( "/replies/pages/" + bno + "/" + page + ".json", 
             function(data) {
-                console.log("data : " + data);
                 if(callback){
-                    callback(data);
+                    callback(data.replyCnt, data.list);
                 }
              }).fail(function(xhr, status, err){
                 if(error){
@@ -43,23 +61,23 @@ var replyService = ( function(){
                 }
              });
     }
-    
-    function remove(rno, callback, error){
-        $.ajax({
-            type : 'delete',
-            url : 'replies/' + rno,
-            success : function(deleteResult, status, xhr){
-                if(callback){
-                    callback(deleteResult);
-                }
-            },
-            error : function(xhr, status, er){
-                if(error){
-                    error(er);
-                }
-            }
-        });
-    }
+
+    function remove(rno, callback, error) {
+		$.ajax({
+			type : 'delete',
+			url : '/replies/' + rno,
+			success : function(deleteResult, status, xhr) {
+				if (callback) {
+					callback(deleteResult);
+				}
+			},
+			error : function(xhr, status, er) {
+				if (error) {
+					error(er);
+				}
+			}
+		});
+	}
 
     function update(reply, callback, error){
         console.log("Rno : " + reply.rno);
@@ -98,7 +116,6 @@ var replyService = ( function(){
         var today =  new Date();
         var gap = today.getTime() - timeValue;
         var dateObj = new Date(timeValue);
-        console.log("time check ===> " + timeValue + " : " + today + " : " + dateObj  + "gap : " + gap);
         
         var str = "";
 

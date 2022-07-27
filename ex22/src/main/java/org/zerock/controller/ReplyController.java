@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.zerock.domain.Criteria;
+import org.zerock.domain.ReplyPageDTO;
 import org.zerock.domain.ReplyVO;
 import org.zerock.service.ReplyService;
 
@@ -42,17 +43,24 @@ public class ReplyController {
 	}
 	
 	//3342362L, 3342357L,3342351L,3342401L,3342346L
+//	@GetMapping(value="/pages/{bno}/{page}",
+//			produces = {MediaType.APPLICATION_XML_VALUE,
+//								  MediaType.APPLICATION_JSON_VALUE})
+//	public ResponseEntity<List<ReplyVO>> getList(
+//			@PathVariable("page") int page,
+//			@PathVariable("bno") Long bno
+//			) {
+//		log.info("getList-----------------------");
+//		Criteria cri = new Criteria(page, 10);
+//		log.info("cri----------------- : " + cri);
+//		return new ResponseEntity<List<ReplyVO>>(service.getList(cri, bno),HttpStatus.OK);
+//	}
 	@GetMapping(value="/pages/{bno}/{page}",
-			produces = {MediaType.APPLICATION_XML_VALUE,
-								  MediaType.APPLICATION_JSON_VALUE})
-	public ResponseEntity<List<ReplyVO>> getList(
-			@PathVariable("page") int page,
-			@PathVariable("bno") Long bno
-			) {
+			produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<ReplyPageDTO> getList(	@PathVariable("page") int page, @PathVariable("bno") Long bno 	) {
 		log.info("getList-----------------------");
 		Criteria cri = new Criteria(page, 10);
-		log.info("cri----------------- : " + cri);
-		return new ResponseEntity<List<ReplyVO>>(service.getList(cri, bno),HttpStatus.OK);
+		return new ResponseEntity<>(service.getListPage(cri, bno),HttpStatus.OK);
 	}
 	
 	@GetMapping(value="/{rno}",
@@ -63,13 +71,14 @@ public class ReplyController {
 		return new ResponseEntity<ReplyVO>(service.get(rno),HttpStatus.OK);
 	}
 	
-	@DeleteMapping(value="/{rno}",produces = {MediaType.TEXT_PLAIN_VALUE})
-	public ResponseEntity<String> remove(@PathVariable("rno")Long rno){
-		log.info("deleteMapping ------ : " + rno);
-		System.out.println("--------------------------------------");
-		return service.remove(rno)==1? new ResponseEntity<String>("success", HttpStatus.OK):
-							new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
+	//-----------------------
+	@DeleteMapping(value = "/{rno}", produces = { MediaType.TEXT_PLAIN_VALUE })
+		public ResponseEntity<String> remove(@PathVariable("rno") Long rno) {
+		log.info("remove: " + rno);
+		return service.remove(rno) == 1 ? new ResponseEntity<>("success", HttpStatus.OK)
+				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	//--------------------------
 	
 	@RequestMapping(value="/{rno}", consumes="application/json", produces = {MediaType.TEXT_PLAIN_VALUE},
 			method = {RequestMethod.PUT, RequestMethod.PATCH})

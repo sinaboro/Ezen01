@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="move"/>
+		<item key="selection" value="new"/>
 		<list key="findhistory">
+			<item value="new"/>
+			<item value="chat"/>
+			<item value="modalInputReply"/>
 			<item value="move"/>
 			<item value="Striped "/>
 			<item value="Kitchen "/>
@@ -20,9 +23,6 @@
 			<item value="JdbcUrl"/>
 			<item value="setDri"/>
 			<item value="jdbc"/>
-			<item value="Encoding"/>
-			<item value="url"/>
-			<item value="h4"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>

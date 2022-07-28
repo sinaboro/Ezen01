@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="new"/>
+		<item key="selection" value="ModBtn"/>
 		<list key="findhistory">
-			<item value="new"/>
+			<item value="ModBtn"/>
+			<item value="console"/>
+			<item value="replypageFooter"/>
+			<item value="modalRemoveBtn"/>
+			<item value="check"/>
+			<item value="time"/>
+			<item value="modalModBtn"/>
 			<item value="chat"/>
+			<item value="new"/>
 			<item value="modalInputReply"/>
 			<item value="move"/>
 			<item value="Striped "/>
 			<item value="Kitchen "/>
 			<item value="../"/>
 			<item value="close"/>
-			<item value="setDriverClassName"/>
-			<item value="getConn"/>
-			<item value="servlet"/>
-			<item value="DataSource"/>
-			<item value="JdbcUrl"/>
-			<item value="setDri"/>
-			<item value="jdbc"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>
@@ -31,8 +31,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1214"/>
-		<item key="DIALOG_Y_ORIGIN" value="360"/>
+		<item key="DIALOG_X_ORIGIN" value="1383"/>
+		<item key="DIALOG_Y_ORIGIN" value="343"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

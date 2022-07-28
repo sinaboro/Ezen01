@@ -5,6 +5,13 @@
 
 <%@include file="../includes/header.jsp"%>
 
+<style type="text/css">
+	#replycheck {
+		background : #eee;
+		cursor : pointer;
+	}
+</style>
+
 <div class="row">
    <div class="col-lg-12">
       <h1 class="page-header">Tables</h1>
@@ -73,9 +80,9 @@
          </div>
          <!-- /.panel-heading -->
          <div class="panel-body">
-            <ul class="chat">
+            <ul class="chat" id="replycheck">
                <!--  Start reply -->
-               <li class="left clearfix" data-rno='12'>
+               <li class="left clearfix"   data-rno='12'>
                   <div>
                      <div class="header">
                         <strong class="primary-font">user00</strong> 
@@ -265,9 +272,8 @@
                      modal.find("input").val("");
                      modalInputReplyDate.closest("div").hide();
                      modal.find("button[id !='modalCloseBtn']").hide();
-
                      modalRegisterBtn.show();
-
+                     $("#myModalLabel .modal-title").text("댓글 등록");
                      $(".modal").modal("show");
 
                   });
@@ -280,6 +286,7 @@
                         replyer : modalInputReplyer.val(),
                         bno : bnoValue
                      };
+                     $("#myModalLabel .modal-title").text("댓글 등록");
                      replyService.add(reply, function(result) {
                         alert(result);
                         modal.find("input").val("");

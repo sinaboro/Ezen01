@@ -202,13 +202,6 @@
 			searchForm.submit();
 		});
 		
-		
-		
-		
-		
-		
-		
-		
 	});
 </script>
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<launchConfiguration type="org.eclipse.wst.server.ui.launchConfigurationType">
+    <stringAttribute key="client-id" value="org.eclipse.wst.server.ui.web"/>
+    <stringAttribute key="launchable-adapter-id" value="org.eclipse.jst.server.tomcat.web"/>
+    <stringAttribute key="module-artifact" value="org.eclipse.jst.jee.server:ex05//"/>
+    <stringAttribute key="module-artifact-class" value="org.eclipse.wst.server.core.util.WebResource"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/Day20220412/src/Ex05.java"/>
+        <listEntry value="/ex05"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-        <listEntry value="1"/>
+        <listEntry value="4"/>
     </listAttribute>
-    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Ex05"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Day20220412"/>
+    <stringAttribute key="server-id" value="Tomcat v9.0 Server at localhost"/>
 </launchConfiguration>

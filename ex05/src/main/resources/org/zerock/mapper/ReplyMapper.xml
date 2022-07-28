@@ -5,7 +5,7 @@
   
 <mapper namespace="org.zerock.mapper.ReplyMapper">
   	<insert id="insert">
-  		insert into tbl_reply(rno2, bno, reply, replyer)
+  		insert into tbl_reply(rno, bno, reply, replyer)
   		values (seq_reply.nextval, #{bno}, #{reply}, #{replyer})
   	</insert>
   	
@@ -33,7 +33,7 @@
 	  			from tbl_reply
 	  			where bno = #{bno} and rno> 0
 	  			and rownum <= #{cri.pageNum}* #{cri.amount}
-	  		) where rn > (#{cri.pageNum}-1) * #{cri.amount}
+	  		) where rn > (#{cri.pageNum}-1) * #{cri.amount} ORDER BY rno DESC
 	  	 ]]>
   	</select>
   	

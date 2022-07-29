@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="ModBtn"/>
+		<item key="selection" value="Servlet"/>
 		<list key="findhistory">
+			<item value="modal-title"/>
+			<item value="servlet"/>
+			<item value="REPLY MO"/>
+			<item value="modalModBtn"/>
+			<item value="Modify"/>
+			<item value="addReplyBtn"/>
+			<item value="new Re"/>
+			<item value="modalRegisterBtn"/>
+			<item value="new Reply"/>
+			<item value="new"/>
+			<item value="New Reply"/>
+			<item value="new re"/>
 			<item value="ModBtn"/>
 			<item value="console"/>
 			<item value="replypageFooter"/>
-			<item value="modalRemoveBtn"/>
-			<item value="check"/>
-			<item value="time"/>
-			<item value="modalModBtn"/>
-			<item value="chat"/>
-			<item value="new"/>
-			<item value="modalInputReply"/>
-			<item value="move"/>
-			<item value="Striped "/>
-			<item value="Kitchen "/>
-			<item value="../"/>
-			<item value="close"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>

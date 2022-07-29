@@ -1,4 +1,5 @@
-* 오라클 사용자 생성
+--주석* 오라클 사용자 생성
+
 create user book IDENTIFIED by 1234
 default TABLESPACE users
 TEMPORARY TABLESPACE temp;
@@ -20,7 +21,7 @@ alter table tbl_board add CONSTRAINT pk_board
 PRIMARY key(bno);
 
 insert into TBL_BOARD(bno, title, content, writer)
-values(seq_board.nextval, 'java', '내용....', '남궁성');
+values(seq_board.nextval, 'java', '내용....', '남궁성');  --이넘 중복 저장이요
 
 create table tbl_reply(
     rno number(10,0),

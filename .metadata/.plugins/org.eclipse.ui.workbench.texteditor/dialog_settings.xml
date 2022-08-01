@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Servlet"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="showI"/>
+			<item value="uploadDiv"/>
 			<item value="modal-title"/>
 			<item value="servlet"/>
 			<item value="REPLY MO"/>
@@ -21,8 +23,6 @@
 			<item value="New Reply"/>
 			<item value="new re"/>
 			<item value="ModBtn"/>
-			<item value="console"/>
-			<item value="replypageFooter"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>

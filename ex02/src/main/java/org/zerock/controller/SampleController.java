@@ -10,7 +10,7 @@ import org.zerock.domain.SampleDAO;
 import lombok.extern.log4j.Log4j;
 
 @Controller
-@RequestMapping("/sample/*")
+@RequestMapping("/sample2/*")
 @Log4j
 public class SampleController {
 	

@@ -2,6 +2,7 @@ package org.zerock.controller;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
@@ -201,7 +202,28 @@ public class UploadController {
 		return new ResponseEntity<List<AttachFileDTO>>(list,HttpStatus.OK);
 	}//uploadAjaxPost for
 	
-	
+	//첨부파일 삭제
+	@PostMapping("/deleteFile")
+	@ResponseBody
+	public ResponseEntity<String> deleteFile(String fileName, String type){
+		log.info("delete File --------> " + fileName);
+		File file ;
+		try {
+			file = new File("c:\\upload\\" + URLDecoder.decode(fileName, "utf-8"));
+			file.delete();
+			
+			if(type.equals("image")) {
+				String largeFileName = file.getAbsolutePath().replace("s_", "");
+				file =  new File(largeFileName);
+				file.delete();
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<String>("deleted", HttpStatus.OK);
+	}
 
 }
 	

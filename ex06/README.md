@@ -49,3 +49,16 @@ update tbl_board set replycnt =
 (select count(rno) from tbl_reply
 where tbl_reply.bno = tbl_board.bno
 );
+
+
+-- 첨부파일 등록 테이블 
+create table tbl_attach(
+    uuid varchar2(100) not null,
+    uploadPath varchar2(200) not null,
+    fileName varchar2(100) not null,
+    filetype char(1) default 'I',
+    bno number(10,0)
+);
+
+alter table tbl_attach add CONSTRAINT pk_attach PRIMARY key(uuid);
+alter table tbl_attach add CONSTRAINT fk_board_attach FOREIGN key (bno) REFERENCES tbl_board(bno);

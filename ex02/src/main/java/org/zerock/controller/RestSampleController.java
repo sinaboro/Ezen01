@@ -26,70 +26,68 @@ import org.zerock.domain.Ticket;
 import lombok.extern.log4j.Log4j;
 import oracle.jdbc.proxy.annotation.Post;
 
-//@Controller
-@RestController  //@Controller + @ResponseBody
+@RestController
 @RequestMapping("/sample")
 @Log4j
 public class RestSampleController {
-	                                                             //¹İÈ¯Çü
+	                                                             //ï¿½ï¿½È¯ï¿½ï¿½
 //	@GetMapping(value="/getText" , produces = "text/plain; charset=utf-8")
 	@GetMapping(value="/getText" , produces = {MediaType.TEXT_PLAIN_VALUE})
-//	@ResponseBody
 	public String getText() {
 		log.info("MINY TYPE : " + MediaType.TEXT_PLAIN_VALUE);
-		return "¾È³çÇÏ¼¼¿ä";
+		return "ì•ˆë…•í•˜ì„¸ìš”";
 	}
 	
-	//°´Ã¼¹İÈ¯
+	//ê°ì²´ë°˜í™˜
 	@GetMapping(value="/getSample", produces = {
 			MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE
 	})
-	//@ResponseBody
 	public SampleVO getSample() {
 		log.info("getSample---------------------");
-		return new SampleVO(111,  "È«",  "±æµ¿");
+		return new SampleVO(111,  "í™",  "ê¸¸ë™");
 	}
 	
 	@GetMapping(value="/getList", produces = {
 			MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE})
 	public List<SampleVO> getList(){
-//		List<SampleVO> list = new ArrayList<SampleVO>();
-//		SampleVO vo = new SampleVO();
-//		vo.setMno(000);
-//		vo.setFirstName("¹Ú");
-//		vo.setLastName("ÂùÈ£");
-//		list.add(vo);
-//		
-//		SampleVO vo2 = new SampleVO();
-//		vo2.setMno(111);
-//		vo2.setFirstName("±è");
-//		vo2.setLastName("ÂùÈ£");
-//		list.add(vo2);
-//		
-//		SampleVO vo3 = new SampleVO();
-//		vo3.setMno(222);
-//		vo3.setFirstName("È«");
-//		vo3.setLastName("ÂùÈ£");
-//		list.add(vo3);
-//		
-//		return list;
-		return IntStream.range(1, 5).mapToObj(i->new SampleVO(i, i+"FistName", i+"LastName"))
-				.collect(Collectors.toList());
+		List<SampleVO> list = new ArrayList<SampleVO>();
+		SampleVO vo = new SampleVO();
+		vo.setMno(000);
+		vo.setFirstName("ë°•");
+		vo.setLastName("ì°¬í˜¸");
+		list.add(vo);
+		
+		SampleVO vo2 = new SampleVO();
+		vo2.setMno(111);
+		vo2.setFirstName("ê¹€");
+		vo2.setLastName("ì°¬í˜¸");
+		list.add(vo2);
+		
+		SampleVO vo3 = new SampleVO();
+		vo3.setMno(222);
+		vo3.setFirstName("í™");
+		vo3.setLastName("ì°¬í˜¸");
+		list.add(vo3);
+		
+		return list;
 		
 	}
 	
 	@GetMapping(value="/getMap", produces = {
 			MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_XML_VALUE})
+			MediaType.APPLICATION_XML_VALUE }
+	)
 	public Map<String, SampleVO> getMap(){
 		Map<String, SampleVO> map =  new HashMap<>();
-		map.put("First", new SampleVO(111, "¼ö¿ø", "ÀÌÁ¨"));
-		map.put("Second", new SampleVO(222, "°æ±â", "ÆÈ´Ş±¸"));
+		map.put("First", new SampleVO(111, "ìˆ˜ì›", "ì´ì  "));
+		map.put("Second", new SampleVO(222, "ê²½ê¸°", "íŒ”ë‹¬êµ¬"));
 		return map;
 	}
 	
+	
+	//ìƒíƒœ ì½”ë“œë¡œ í•¨ê»˜ ì „ì†¡.
 	@GetMapping(value="/check", params = {"height", "weight"}	)
 	public ResponseEntity<SampleVO> check(Double height, Double weight){
 		SampleVO vo = new SampleVO(1, " " + height , " "+ weight);
@@ -115,19 +113,11 @@ public class RestSampleController {
 	@PostMapping("/ticket")
 	public Ticket convert(@RequestBody Ticket ticket) {
 		log.info("convert : "+ticket);
+		ticket.setTno(200);
+		ticket.setOwner("í™ê¸¸ë™");
+		ticket.setGrade("Cë“±ê¸‰");
 		return ticket;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

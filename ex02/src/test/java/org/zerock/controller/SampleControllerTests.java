@@ -47,8 +47,8 @@ public class SampleControllerTests {
 		
 		//java객체를 json으로 변환
 		String jsonStr = new Gson().toJson(ticket);
-		
 		System.out.println("jsonStr " + jsonStr);
+		
 		mockMvc.perform(
 				post("/sample/ticket")
 				.contentType(MediaType.APPLICATION_JSON)

@@ -4,8 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.zerock.domain.BoardAttachVO;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
+import org.zerock.mapper.BoardAttachMapper;
 import org.zerock.mapper.BoardMapper;
 
 import lombok.AllArgsConstructor;
@@ -13,15 +16,24 @@ import lombok.extern.log4j.Log4j;
 
 @Service
 @Log4j
-@AllArgsConstructor
 public class BoardServiceImpl implements BoardService{
 	
+	@Autowired
 	private BoardMapper mapper;
+	
+	@Autowired
+	private BoardAttachMapper attachmapper;
 
+	@Transactional
 	public void register(BoardVO vo) {
 		log.info("register...............................................");
-		//	mapper.insert(vo);
 		mapper.insertSelectKey(vo);
+		if(vo.getAttachList() == null || vo.getAttachList().size() <=0) return ;
+		
+		vo.getAttachList().forEach(attach->{
+			attach.setBno(vo.getBno());
+			attachmapper.insert(attach);
+		});
 	}
 
 	@Override
@@ -48,6 +60,12 @@ public class BoardServiceImpl implements BoardService{
 	public int getTotal(Criteria cri) {
 		log.info("get total count");
 		return mapper.getTotalCount(cri);
+	}
+
+	@Override
+	public List<BoardAttachVO> getAttachList(Long bno) {
+		log.info("get Attach list by bno : " + bno);
+		return attachmapper.findByBno(bno);
 	}
 	
 }

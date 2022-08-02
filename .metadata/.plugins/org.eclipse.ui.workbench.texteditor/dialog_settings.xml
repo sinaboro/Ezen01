@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="getAtt"/>
 		<list key="findhistory">
+			<item value="getAtt"/>
+			<item value="uploadAjaxAction"/>
+			<item value="uploadResult"/>
 			<item value="showI"/>
 			<item value="uploadDiv"/>
 			<item value="modal-title"/>
@@ -20,9 +23,6 @@
 			<item value="modalRegisterBtn"/>
 			<item value="new Reply"/>
 			<item value="new"/>
-			<item value="New Reply"/>
-			<item value="new re"/>
-			<item value="ModBtn"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>

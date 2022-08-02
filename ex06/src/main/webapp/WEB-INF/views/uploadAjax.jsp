@@ -75,6 +75,23 @@
 		var maxSize = 5242880; //5MB
 		var cloneObj = $(".uploadDiv").clone();
 		
+		//x표시에 대한 이벤트 처리
+		$(".uploadResult").on("click", "span", function(e){
+			var targetFile = $(this).data("file");
+			var type = $(this).data("type");
+			console.log("targetFile : " + targetFile);
+			
+			$.ajax({
+				url : '/deleteFile',
+				data : {fileName: targetFile, type:type},
+				dataType : 'text',
+				type : 'post',
+				success : function(result){
+					alert(result);
+				}
+			});//ajax
+		});//end uploadResult
+		
 		//파일 확장자와 크기 설정 시작
 		function checkExtension(fileName, fileSize){
 				if(fileSize >= maxSize){
@@ -98,20 +115,27 @@
 			 $(uploadResultArr).each(function(i,obj){
 				if(!obj.image){
 					var fileCallPath = encodeURIComponent(obj.uploadPath+"/"+obj.uuid+"_"+obj.fileName);
-				 	str += "<li><a href='/download?fileName="+ fileCallPath +" '><img src='/resources/img/attach.png '>" + obj.fileName + "</a></li>";
+					var fileLink = fileCallPath.replace(new RegExp(/\\/g), "/");
+					
+					str += "<li><div><a href='/download?fileName="+fileCallPath+"'>"+
+			           "<img src='/resources/img/attach.png'>"+obj.fileName+"</a>"+
+			           "<span data-file=\'"+fileCallPath+"\' data-type='file'> x </span>"+
+			           "<div></li>"
 				}else{
-					//str += "<li>" + obj.fileName + "</li>";
 					var fileCallPath = encodeURIComponent(obj.uploadPath+"/s_"+obj.uuid+"_"+obj.fileName);
 					var originPath = obj.uploadPath + "\\" + obj.uuid + "_" + obj.fileName;
 					originPath = originPath.replace(new RegExp(/\\/g), "/");
-					str += "<li><a href=\"javascript:showImage(\'"+originPath+"\')\"><img src='/display?fileName="+fileCallPath+"'></a><li>";
+					
+					str += "<li><a href=\"javascript:showImage(\'"+originPath+"\')\">"+
+		              "<img src='display?fileName="+fileCallPath+"'></a>"+
+		              "<span data-file=\'"+fileCallPath+"\' data-type='image'> x </span>"+
+		              "<li>";
 				}
 			 });
-			 
 			 uploadResult.append(str);
 		 }
 		 
-		$("#uploadBtn").on("click", function(e){
+		$("#uploadBtn").on("click",  function(e){
 			var formData = new FormData();
 			var inputFile = $("input[name='uploadFile']");
 			var files = inputFile[0].files;

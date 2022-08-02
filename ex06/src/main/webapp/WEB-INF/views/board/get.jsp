@@ -494,30 +494,40 @@ $(document).ready(function(){
 	        $(arr).each(function(i, attach){
 	          //image type
 		          if(attach.fileType){
-			            var fileCallPath =  encodeURIComponent( attach.uploadPath+ "/s_"+attach.uuid +"_"+attach.fileName);
-			            
-			            str += "<li data-path='"+attach.uploadPath+"' data-uuid='"+attach.uuid+"' data-filename='"+attach.fileName+"' data-type='"+attach.fileType+"' ><div>";
-			            str += "<img src='/display?fileName="+fileCallPath+"'>";
-			            str += "</div>";
-			            str +"</li>";
+		        	  var fileCallPath =  encodeURIComponent( attach.uploadPath+ "/s_"+attach.uuid +"_"+attach.fileName);
+		              str += "<li data-path='"+attach.uploadPath+"' data-uuid='"+attach.uuid+"' data-filename='"+attach.fileName+"' data-type='"+attach.fileType+"' ><div>";
+		              str += "<img src='/display?fileName="+fileCallPath+"'>";
+		              str += "</div>";
+		              str +"</li>";
 	        	  }else{
-			            str += "<li data-path='"+attach.uploadPath+"' data-uuid='"+attach.uuid+"' data-filename='"+attach.fileName+"' data-type='"+attach.fileType+"' ><div>";
-			            str += "<span> "+ attach.fileName+"</span><br/>";
-			            str += "<img src='/resources/img/attach.png'></a>";
-			            str += "</div>";
-			            str +"</li>";
+	        		  str += "<li data-path='"+attach.uploadPath+"' data-uuid='"+attach.uuid+"' data-filename='"+attach.fileName+"' data-type='"+attach.fileType+"' ><div>";
+	                  str += "<span> "+ attach.fileName+"</span><br/>";
+	                  str += "<img src='/resources/img/attach.png'></a>";
+	                  str += "</div>";
+	                  str +"</li>";
 	        	  }
 	        });  //end for each
 	        $(".uploadResult ul").html(str);
 	    }); //end for json
    	})(); //end for function
+   	
+   	$(".uploadResult").on("click","li", function(e){
+        
+   	    console.log("view image");
+   	    
+   	    var liObj = $(this);
+   	    
+   	    var path = encodeURIComponent(liObj.data("path")+"/" + liObj.data("uuid")+"_" + liObj.data("filename"));
+   	    
+   	    if(liObj.data("type")){
+   	      showImage(path.replace(new RegExp(/\\/g),"/"));
+   	    }else {
+   	      //download 
+   	      self.location ="/download?fileName="+path
+   	   }
+   	
 });
 </script>
-
-
-
-
-
 
 
 

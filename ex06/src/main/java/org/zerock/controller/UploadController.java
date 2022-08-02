@@ -95,6 +95,7 @@ public class UploadController {
 		
 		return result;
 	}
+	
 	private String getFolder() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
@@ -155,17 +156,18 @@ public class UploadController {
 		String uploadFolderPath = getFolder();
 
 		//make Folder create.....
-		File uplaodPath = new File(uploadFolder, uploadFolderPath);
-		log.info("uplaodPath===>" + uplaodPath);
+		File uploadPath = new File(uploadFolder, uploadFolderPath);
+		log.info("uplaodPath===>" + uploadPath);
 		
-		if(uplaodPath.exists() == false) {
-			uplaodPath.mkdirs();
+		if(uploadPath.exists() == false) {
+			uploadPath.mkdirs();
 		} 
 		
 		for(MultipartFile multipartFile : uploadFile) {
 			AttachFileDTO attachDTO = new AttachFileDTO();
 			
 			String uploadFileName = multipartFile.getOriginalFilename();
+			
 			uploadFileName = uploadFileName.substring(uploadFileName.lastIndexOf("\\")+1);
 			log.info("only file name : " +uploadFileName );
 			attachDTO.setFileName(uploadFileName);
@@ -178,7 +180,7 @@ public class UploadController {
 //			File savaFile = new File(uploadFolder, uploadFileName);
 			
 			try {
-				File savaFile = new File(uplaodPath, uploadFileName);
+				File savaFile = new File(uploadPath, uploadFileName);
 				multipartFile.transferTo(savaFile);
 				
 				attachDTO.setUuid(uuid.toString());
@@ -188,9 +190,8 @@ public class UploadController {
 				if(checkImageType(savaFile)) {
 					attachDTO.setImage(true);
 					
-					FileOutputStream thumbnail = new FileOutputStream(
-							new File(uplaodPath, "s_"+ uploadFileName));
-					Thumbnailator.createThumbnail(multipartFile.getInputStream(), thumbnail, 100,100);
+					FileOutputStream thumbnail = new FileOutputStream(new File(uploadPath, "s_" + uploadFileName));
+					Thumbnailator.createThumbnail(multipartFile.getInputStream(), thumbnail, 100, 100);
 					thumbnail.close();
 				}
 				list.add(attachDTO);
@@ -199,7 +200,7 @@ public class UploadController {
 				e.printStackTrace();
 			}
 		}//end for
-		return new ResponseEntity<List<AttachFileDTO>>(list,HttpStatus.OK);
+		return new ResponseEntity<List<AttachFileDTO>>(list, HttpStatus.OK);
 	}//uploadAjaxPost for
 	
 	//첨부파일 삭제

@@ -6,11 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="getAtt"/>
+		<item key="selection" value="uploadResult"/>
 		<list key="findhistory">
-			<item value="getAtt"/>
-			<item value="uploadAjaxAction"/>
 			<item value="uploadResult"/>
+			<item value="button"/>
+			<item value="fileName"/>
+			<item value="getAtt"/>
+			<item value="getJSON"/>
+			<item value="uploadAjaxAction"/>
 			<item value="showI"/>
 			<item value="uploadDiv"/>
 			<item value="modal-title"/>
@@ -20,9 +23,6 @@
 			<item value="Modify"/>
 			<item value="addReplyBtn"/>
 			<item value="new Re"/>
-			<item value="modalRegisterBtn"/>
-			<item value="new Reply"/>
-			<item value="new"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>
@@ -31,8 +31,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1383"/>
-		<item key="DIALOG_Y_ORIGIN" value="343"/>
+		<item key="DIALOG_X_ORIGIN" value="1401"/>
+		<item key="DIALOG_Y_ORIGIN" value="581"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

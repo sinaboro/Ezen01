@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="uploadResult"/>
+		<item key="selection" value="log4"/>
 		<list key="findhistory">
+			<item value="Log4"/>
+			<item value="log4"/>
 			<item value="uploadResult"/>
 			<item value="button"/>
 			<item value="fileName"/>
@@ -21,8 +23,6 @@
 			<item value="REPLY MO"/>
 			<item value="modalModBtn"/>
 			<item value="Modify"/>
-			<item value="addReplyBtn"/>
-			<item value="new Re"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>

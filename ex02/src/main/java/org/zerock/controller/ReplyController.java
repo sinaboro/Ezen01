@@ -45,11 +45,10 @@ public class ReplyController {
 	//{reply:"JS Test2", replyer:"tester2", bno:bnoValue}  
 	//vo.setReply("JS Test2"), vo.setReplyer("tester2"), vo.setBno(10000)
 	public ResponseEntity<String> create(@RequestBody ReplyVO vo) {
-		log.info("ReplyVO----------- : " + vo);
 		int insertCount = service.register(vo);
 		
 		if(insertCount == 1) {
-			return new ResponseEntity<>("abc.........", HttpStatus.OK);
+			return new ResponseEntity<>("seccess", HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -59,9 +58,7 @@ public class ReplyController {
 			produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
 	public ResponseEntity<List<ReplyVO>> getList(@PathVariable("bno") Long bno, 
 										@PathVariable("page") int page) {
-		log.info("getList..............." + bno +  " : " + page);
 		Criteria cri = new Criteria(page, 10);
-		log.info("cri : " + cri);
 		return new ResponseEntity<>(service.getList(cri, bno), HttpStatus.OK);
 	}
 	

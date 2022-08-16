@@ -3,8 +3,7 @@ console.log('Relpy Module....')
 var replyService = ( function() {
 
     function add(reply, callback, error){
-        console.log("add reply2.............");
-
+        
         $.ajax({
             type : 'post' ,                  
             url : '/replies/new',       

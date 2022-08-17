@@ -161,6 +161,29 @@
 	 var modalRemoveBtn = $("#modalRemoveBtn");
 	 var modalRegisterBtn = $("#modalRegisterBtn");
 	 
+	 modalRemoveBtn.on("click", function(){
+		 let rno = modal.data("rno");
+		
+		 replyService.remove(rno, function(result){
+			 alert("result : " + result);
+			 modal.modal("hide");
+			 showList(1);
+		 });
+	 }); //삭제하기
+	 
+	 modalModBtn.on("click", function(e){
+		 var reply = {
+				 rno : modal.data("rno"),
+				 reply : modalInputReply.val()
+		 };
+		 
+		 replyService.update(reply, function(result){
+			 alert("result : " + result);
+			 modal.modal("hide");
+			 showList(1);
+		 });
+	 }); //수정하기
+	 
 	  $("#addReplyBtn").on("click",function(){
 		  
 		  modal.find("input").val("");

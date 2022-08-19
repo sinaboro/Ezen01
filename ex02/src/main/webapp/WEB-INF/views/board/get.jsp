@@ -171,7 +171,7 @@
 		 replyService.remove(rno, function(result){
 			 alert("result : " + result);
 			 modal.modal("hide");
-			 showList(1);
+			 showList(pageNum);
 		 });
 	 }); //삭제하기
 	 
@@ -184,7 +184,7 @@
 		 replyService.update(reply, function(result){
 			 alert("result : " + result);
 			 modal.modal("hide");
-			 showList(1);
+			 showList(pageNum);
 		 });
 	 }); //수정하기
 	 
@@ -304,8 +304,8 @@
 			 str += "<li class='page-item'><a class='page-link' href=' "+ (endNum+1) +" '>Next</a></li>";
 		 }
 		 
-		 str += "</ul></div>";
-		 console.log("str --> " +str);
+		 str += "</ul>";
+		 console.log("str -> " +str);
 		 replyPageFooter.html(str);
 	  } // end showReplyPage
 	  

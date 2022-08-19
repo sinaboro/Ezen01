@@ -56,14 +56,16 @@ public class ReplyController {
 	}
 	
 	@GetMapping(value="/pages/{bno}/{page}", 
-			produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
+			produces = {MediaType.APPLICATION_JSON_VALUE,
+								   MediaType.APPLICATION_XML_VALUE})
 	public ResponseEntity<ReplyPageDTO> getList(@PathVariable("bno") Long bno, 
+	//public ResponseEntity<List<ReplyVO>> getList(@PathVariable("bno") Long bno, 
 										@PathVariable("page") int page) {
-		Criteria cri = new Criteria(page, 5);
+		Criteria cri = new Criteria(page, 10);
+		log.info("getList bno : " + bno);
+		//return new ResponseEntity<ReplyPageDTO>(service.getListPage(cri, bno), HttpStatus.OK);
 		return new ResponseEntity<>(service.getListPage(cri, bno), HttpStatus.OK);
 	}
-	
-	
 	
 	@DeleteMapping(value="/{rno}", produces = {MediaType.TEXT_PLAIN_VALUE})
 	public ResponseEntity<String> remvoe(@PathVariable("rno") Long rno)  {

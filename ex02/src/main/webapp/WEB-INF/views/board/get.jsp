@@ -78,16 +78,20 @@
                         	<ul class ="chat">
                         		<!-- <li class="left clearfix" data-rno='12'>
                         			<div>
-                        				<div class="header">
+                        				<div class="hearder">
                         					<strong class="primary-font">user00</strong>
-                        					<small class="pull-right text-muted">2018-01-01 12:12</small>
+                        					<samll class="pull-right text-muted">2022-08-18</samll>
                         				</div>
-                        				<p>댓글 테스트</p>
+                        				<p>Testing</p>
                         			</div>
                         		</li> -->
                         	</ul>
                         </div>
                         <!-- /.panel-body -->
+                    
+                        <div class="panel-footer">
+                        </div>
+                        
                     </div>
                     <!-- /.panel -->
                 </div>
@@ -136,8 +140,8 @@
   <script>
   
   
-  
   $(document).ready(function(){
+	
 	  var bnoValue = '<c:out value= "${board.bno}" /> ';
 	  var replyUL = $(".chat");
 	 
@@ -206,7 +210,7 @@
 			  alert("result : " + result);
 			  modal.find("input").val("");
 			  modal.modal("hide");
-			  showList(1);
+			  showList(-1);
 		  });
 		  
 	  }); //Register 등록
@@ -219,7 +223,7 @@
 			  modalInputReply.val(reply.reply);
 			  modalInputReplyer.val(reply.replyer);
 			  modalInputReplyDate.val(
-					  replyService.displyTime( reply.replyDate)).attr("readonly", "readonly"); //수정예정
+					  replyService.displyTime( reply.replyDate)).attr("readonly", "readonly"); 
 			  modal.data("rno", reply.rno);
 			  
 			  modal.find("button[id != 'modalClassBtn']").hide();
@@ -233,12 +237,19 @@
 	  //이벤트위임..끝
 	  
 	  function showList(page){
-		  replyService.getList(
-				{bno:bnoValue, page : page||1},
-				function(list){
+		 
+		  replyService.getList({bno:bnoValue, page : page||1},
+			
+				  function(replyCnt, list){
+				
+					if(page == -1){
+						pageNum = Math.ceil(replyCnt/10.0);
+						showList(pageNum);
+						return ;
+					} 
+					
 					var str="";
 					if(list == null || list.length==0){
-						replyUL.html("");
 						return ;
 					}
 					for(var i=0, len=list.length ||0 ; i<len; i++){
@@ -248,11 +259,64 @@
 						str += "<p>"+ list[i].reply +"</p></div></li>";
 					}
 					replyUL.html(str);
+			     	showReplyPage(replyCnt);
 				} 
 		  ); //end Service
 	  } //end showList
 	  
+	  //댓글 페이지 출력 부분
+	  var pageNum = 1;
+	  var replyPageFooter = $(".panel-footer");
 	  
+	  function showReplyPage(replyCnt){
+		  
+		  var endNum = Math.ceil(pageNum / 10.0) * 10;  
+	      var startNum = endNum - 9; 
+	      
+	      var prev = startNum != 1;
+	      var next = false;
+	      
+	      if(endNum * 10 >= replyCnt){
+	        endNum = Math.ceil(replyCnt/10.0);
+	      }
+	      
+	      if(endNum * 10 < replyCnt){
+	        next = true;
+	      }
+		  
+	      console.log("replyCnt" + replyCnt );
+	      console.log("startNum" + startNum)
+	      console.log("endNum" + endNum)
+	      console.log("prev" + prev)
+	      console.log("next" + next)
+	      
+		 var str =  "<ul class='pagination pull-right' >";
+		 if(prev){
+			 str += "<li class='page-item'><a class='page-link' href=' "+ (stratNum-1) +" '>Previous</a></li>";
+		 }
+		 
+		 for(var i=startNum; i<=endNum; i++){
+			 var active = pageNum == i? "active" : "";
+			 str += "<li class='page-item "+active+"  '><a class='page-link' href=' "+ i +" '> "+ i +"    </a></li>";
+		 }
+		 
+		 if(next){
+			 str += "<li class='page-item'><a class='page-link' href=' "+ (endNum+1) +" '>Next</a></li>";
+		 }
+		 
+		 str += "</ul></div>";
+		 console.log("str --> " +str);
+		 replyPageFooter.html(str);
+	  } // end showReplyPage
+	  
+	  replyPageFooter.on("click","li a", function(e){
+	        e.preventDefault();
+	        var targetPageNum = $(this).attr("href");
+	        
+	        pageNum = targetPageNum;
+	        showList(pageNum);
+	   });    //end replyPageFooter
+	   
   });
  /*  replyService.get(186, function(data){
 	  alert(data);

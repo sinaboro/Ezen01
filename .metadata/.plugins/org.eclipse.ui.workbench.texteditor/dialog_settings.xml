@@ -6,10 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="log4"/>
+		<item key="selection" value="chat"/>
 		<list key="findhistory">
-			<item value="Log4"/>
+			<item value="chat"/>
 			<item value="log4"/>
+			<item value="log"/>
+			<item value="Log4"/>
 			<item value="uploadResult"/>
 			<item value="button"/>
 			<item value="fileName"/>
@@ -21,8 +23,6 @@
 			<item value="modal-title"/>
 			<item value="servlet"/>
 			<item value="REPLY MO"/>
-			<item value="modalModBtn"/>
-			<item value="Modify"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>

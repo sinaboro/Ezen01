@@ -1,5 +1,3 @@
-console.log('Relpy Module....')
-
 var replyService = ( function() {
 
     function add(reply, callback, error){
@@ -25,11 +23,11 @@ var replyService = ( function() {
     function getList(param, callback, error){
         var bno = param.bno;
         var page = param.page || 1;
-
         $.getJSON("/replies/pages/" + bno + "/" + page + ".json" ,
             function(data){
                 if(callback) {
-                    callback(data);
+                  //	callback(data);
+                  	callback(data.replyCnt,  data.list); 
                 }
 
             }).fail(function(xhr, status, err){
@@ -38,6 +36,7 @@ var replyService = ( function() {
                 }
             });
     } //end for getList
+
 
     function remove(rno, callback, error){
             $.ajax({
@@ -131,5 +130,4 @@ var replyService = ( function() {
         get : get,
         displyTime : displyTime
     };  
-
 })();

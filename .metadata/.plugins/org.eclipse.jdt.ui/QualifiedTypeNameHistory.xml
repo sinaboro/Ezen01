@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.propertyeditors.URLEditor"/>
-    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Conditional"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="org.zerock.domain.SampleVO"/>
     <fullyQualifiedTypeName name="oracle.jdbc.proxy.annotation.Post"/>
     <fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
     <fullyQualifiedTypeName name="org.junit.Before"/>
@@ -22,18 +7,13 @@
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
     <fullyQualifiedTypeName name="org.zerock.domain.Ticket"/>
     <fullyQualifiedTypeName name="com.google.gson.Gson"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.net.URLDecoder"/>
     <fullyQualifiedTypeName name="org.zerock.mapper.BoardAttachMapper"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="org.zerock.domain.BoardAttachVO"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Param"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="org.zerock.mapper.ReplyMapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="org.junit.Test"/>
     <fullyQualifiedTypeName name="org.zerock.service.ReplyService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.zerock.controller.BoardController"/>
@@ -58,6 +38,26 @@
     <fullyQualifiedTypeName name="org.zerock.domain.Criteria"/>
     <fullyQualifiedTypeName name="org.zerock.domain.ReplyPageDTO"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
     <fullyQualifiedTypeName name="org.zerock.service.BoardServiceImpl"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.springframework.test.annotation.Commit"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Aspect"/>
+    <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="org.aspectj.lang.annotation.AfterThrowing"/>
+    <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Around"/>
+    <fullyQualifiedTypeName name="org.aspectj.lang.ProceedingJoinPoint"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Insert"/>
+    <fullyQualifiedTypeName name="org.zerock.mapper.Sample2Mapper"/>
+    <fullyQualifiedTypeName name="org.zerock.mapper.Sample1Mapper"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
+    <fullyQualifiedTypeName name="org.zerock.service.SampleService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="org.zerock.service.SampleTxService"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 </qualifiedTypeNameHistroy>
